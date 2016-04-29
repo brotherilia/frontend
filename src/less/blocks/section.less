@@ -1,0 +1,65 @@
+.section {
+  .popup();
+
+  &--news {
+    top: 64px;
+
+    &::before {
+      right: 20px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &--contacts {
+    bottom: 0;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      right: 10%;
+    }
+  }
+
+  &--common {
+    position: absolute;
+    top: 64px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__title {
+    .title();
+    margin: 10px 0;
+  }
+
+  &__subtitle {
+    .subtitle();
+    margin: 10px 0;
+  }
+
+  &__items{
+    .reset-list();
+    margin-bottom: 20px;
+  }
+
+  &__item{
+    margin-top: 10px;
+  }
+
+  &__item-date{
+    font-size: @smaller-font-size;
+    line-height: @base-line-height;
+    border-bottom: 1px dotted @base-text-color;
+  }
+}

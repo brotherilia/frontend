@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  .reset-spaces();
+  min-width: 320px;
+  font-family: @base-font-family;
+  font-size: @base-font-size;
+  color: @base-text-color;
+  background-color: @bg-color;
+  user-select: none;
+}
+
+p {
+  .reset-spaces();
+  margin-bottom: 10px;
+  line-height: @base-line-height;
+}
+
+h1,
+h2,
+h3 {
+  .reset-spaces();
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.comment {
+  font-style: italic;
+}

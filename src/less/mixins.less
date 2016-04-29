@@ -1,0 +1,83 @@
+.reset-spaces() {
+  margin: 0;
+  padding: 0;
+}
+
+.reset-list() {
+  .reset-spaces();
+  list-style: none;
+}
+
+.container() {
+  min-width: 320px;
+  max-width: 500px;
+}
+
+.icon-size() {
+  width: @icon-size;
+  height: @icon-size;
+}
+
+.pseudo-common() {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.slogan() {
+  position: absolute;
+  display: block;
+  white-space: nowrap;
+  content: "Front-end Development";
+  font-family: @title-font-family;
+  font-size: @slogan-font-size;
+  font-weight: bold;
+  color: @slogan-color;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.title() {
+  font-family: @title-font-family;
+  font-size: @title-font-size;
+  font-weight: bold;
+  line-height: @title-font-size;
+}
+
+.subtitle() {
+  .title();
+  font-size: @subtitle-font-size;
+  line-height: @subtitle-font-size;
+}
+
+.popup() {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: @slogan-color;
+  box-shadow: 5px 5px 20px 0px @logo-color;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    .pseudo-common();
+    width: 30px;
+    height: 30px;
+    border: 15px solid @slogan-color;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+  }
+
+  &::before {
+    top: -30px;
+    border-top: 15px solid transparent;
+  }
+
+  &::after {
+    bottom: -30px;
+    border-bottom: 15px solid transparent;
+  }
+}

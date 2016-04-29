@@ -1,0 +1,24 @@
+.outl(@color, @content) {
+  outline: 1px solid @color;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: @content;
+    display: block;
+    padding: 0 5px;
+    font-size: 8px;
+    background-color: @color;
+    height: 15px;
+    line-height: 15px;
+  }
+}
+
+.page-header {.outl(red,"page-header");}
+.page-aside-left {.outl(red,"page-aside-left");}
+.page-main {.outl(red,"page-main");}
+.page-aside-right {.outl(red,"page-aside-right");}
+.page-footer {.outl(red,"page-footer");}
+/* .css-icon {outline: 1px solid blue;} */

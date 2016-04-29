@@ -1,0 +1,34 @@
+.logo {
+  &__ilya {
+    position: relative;
+    height: 95px;
+    padding-top: 30px;
+    padding-left: 30px;
+
+    &::before {
+      .pseudo-common();
+      width: 50%;
+      height: 4px;
+      bottom: 0;
+      left: 70px;
+      background: linear-gradient(to right, @logo-color 0%, transparent 100%);
+    }
+
+    &::after {
+      .pseudo-common();
+      width: 50%;
+      height: 2px;
+      bottom: -4px;
+      left: 67px;
+      background: linear-gradient(to right, @logo-color 0%, transparent 100%);
+    }
+  }
+
+  &__menshikov {
+    color: #000000;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, .5);
+    padding-top: 10px;
+    padding-left: 65px;
+  }
+}

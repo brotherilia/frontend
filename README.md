@@ -1,6 +1,6 @@
-# [frontend.menshikov.su](http://frontend.menshikov.su)
-My portfolio
+#[My portfolio](http://frontend.menshikov.su)
+*My activity in front-end development*
 
 ---
 
-По ссылке старая версия. Работа только начинается.
+Запущена новая версия сайта. В ней запланирована реализация адаптивной "резиновой" сетки и стилизация для 4-х вьюпортов. На данный момент работает только мобильная "версия".

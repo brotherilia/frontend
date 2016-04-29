@@ -1,0 +1,40 @@
+.icon-list {
+  .reset-list();
+  height: 64px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &--close-btn {
+    position: absolute;
+    right: 20px;
+    top: 0;
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    .reset-spaces();
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    text-decoration: none;
+    opacity: 0.5;
+    cursor: pointer;
+
+     &:active {
+      transition-property: opacity, transform;
+      transition-duration: 0.5s;
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    .icon-size();
+    fill: @icon-color;
+  }
+}

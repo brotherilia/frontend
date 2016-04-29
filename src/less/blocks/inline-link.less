@@ -1,0 +1,16 @@
+.inline-link {
+  border-bottom: 1px dotted;
+  color: @link-color;
+  cursor: pointer;
+
+  &:visited,
+  &:active {
+    border-bottom: 1px dotted;
+    color: @link-color;
+  }
+
+  &:hover {
+    border-bottom: none;
+    color: @link-hover-color;
+  }
+}

@@ -1,0 +1,51 @@
+.article {
+  margin: 20px;
+  margin-top: 0;
+  padding: 3px;
+  border: 1px solid @bg-alt1-color;
+  border-radius: 20px;
+  background-image: linear-gradient(to left top, rgba(217, 163, 162 ,.3), @bg-color);
+
+  &__title {
+    .reset-spaces();
+    .title();
+    margin-left: 18px;
+    color: @title-color;
+  }
+
+  &__text {
+    padding: 20px;
+    border: 1px solid @bg-alt1-color;
+    border-radius: 16px;
+    background-color: @bg-color;
+    text-align: justify;
+  }
+
+  &__img {
+    width: 230px;
+    line-height: 0;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__img-link {
+    display: block;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, .5);
+
+    &:hover {
+      opacity: 0.5;
+      box-shadow: none;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  &__img-link-dsbl {
+    display: block;
+    opacity: 0.3;
+  }
+
+}
