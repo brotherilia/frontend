@@ -1011,10 +1011,11 @@ img {
           transform: translate(-50%);
 }
 .section--news {
-  top: 240px;
+  top: 64px;
 }
 .section--contacts {
-  bottom: 200px;
+  bottom: 64px;
+  z-index: 1;
 }
 .section__title {
   font-weight: bold;
