@@ -1,108 +1,131 @@
-var newsSection  = document.querySelector('.js-news'),
-    newsOpenBtn  = document.querySelector('.js-news-open'),
-    newsCloseBtn = document.querySelector('.js-news-close'),
-    mainMenuSection  = document.querySelector('.js-main-menu'),
-    mainMenuOpenBtn  = document.querySelector('.js-main-menu-open'),
-    mainMenuCloseBtn = document.querySelector('.js-main-menu-close');
-    prjMenuSection  = document.querySelector('.js-prj-menu'),
-    prjMenuOpenBtn  = document.querySelector('.js-prj-menu-open'),
-    prjMenuCloseBtn = document.querySelector('.js-prj-menu-close'),
-    contactsSection  = document.querySelector('.js-contacts'),
-    contactsOpenBtn  = document.querySelector('.js-contacts-open'),
-    contactsCloseBtn = document.querySelector('.js-contacts-close');
-newsOpenBtn.addEventListener('click', function(event) {
+var mainMenuPopup = document.querySelector('.js-main-menu'),
+    mainMenuBtn   = document.querySelector('.js-main-menu-btn'),
+    mainMenuIcon  = document.querySelector('.js-main-menu-icon'),
+
+    prjMenuPopup  = document.querySelector('.js-prj-menu'),
+    prjMenuBtn    = document.querySelector('.js-prj-menu-btn'),
+    prjMenuIcon   = document.querySelector('.js-prj-menu-icon'),
+
+    newsPopup     = document.querySelector('.js-news'),
+    newsBtn       = document.querySelector('.js-news-btn'),
+    newsIcon      = document.querySelector('.js-news-icon'),
+
+    contactsPopup = document.querySelector('.js-contacts'),
+    contactsBtn   = document.querySelector('.js-contacts-btn'),
+    contactsIcon  = document.querySelector('.js-contacts-icon');
+
+mainMenuBtn.addEventListener('click', function(event) {
   event.preventDefault();
-  if (newsSection.classList.contains('js-hide')) {
-    newsSection.classList.remove('js-hide')
-    if (!(mainMenuSection.classList.contains('js-hide'))) {
-        mainMenuSection.classList.add('js-hide')
+  if (mainMenuPopup.classList.contains('js-hide')) {
+    mainMenuPopup.classList.remove('js-hide')
+    mainMenuIcon.classList.remove('css-icon--menu')
+    mainMenuIcon.classList.add('css-icon--cross')
+    if (!(newsPopup.classList.contains('js-hide'))) {
+      newsPopup.classList.add('js-hide')
+      newsIcon.classList.remove('css-icon--cross')
+      newsIcon.classList.add('css-icon--hot')
     }
-    if (!(prjMenuSection.classList.contains('js-hide'))) {
-        prjMenuSection.classList.add('js-hide')
+    if (!(prjMenuPopup.classList.contains('js-hide'))) {
+      prjMenuPopup.classList.add('js-hide')
+      prjMenuIcon.classList.remove('css-icon--cross')
+      prjMenuIcon.classList.add('css-icon--briefcase')
     }
-    if (!(contactsSection.classList.contains('js-hide'))) {
-        contactsSection.classList.add('js-hide')
+    if (!(contactsPopup.classList.contains('js-hide'))) {
+      contactsPopup.classList.add('js-hide')
+      contactsIcon.classList.remove('css-icon--cross')
+      contactsIcon.classList.add('css-icon--info')
     }
   }
   else {
-    newsSection.classList.add('js-hide');
+    mainMenuPopup.classList.add('js-hide');
+    mainMenuIcon.classList.remove('css-icon--cross')
+    mainMenuIcon.classList.add('css-icon--menu')
   }
 });
-newsCloseBtn.addEventListener('click', function(event) {
+
+prjMenuBtn.addEventListener('click', function(event) {
   event.preventDefault();
-  if (!(newsSection.classList.contains('js-hide'))) {
-      newsSection.classList.add('js-hide')
-  }
-});
-mainMenuOpenBtn.addEventListener('click', function(event) {
-  event.preventDefault();
-  if (mainMenuSection.classList.contains('js-hide')) {
-    mainMenuSection.classList.remove('js-hide')
-    if (!(newsSection.classList.contains('js-hide'))) {
-        newsSection.classList.add('js-hide')
+  if (prjMenuPopup.classList.contains('js-hide')) {
+    prjMenuPopup.classList.remove('js-hide')
+    prjMenuIcon.classList.remove('css-icon--briefcase')
+    prjMenuIcon.classList.add('css-icon--cross')
+    if (!(newsPopup.classList.contains('js-hide'))) {
+      newsPopup.classList.add('js-hide')
+      newsIcon.classList.remove('css-icon--cross')
+      newsIcon.classList.add('css-icon--hot')
     }
-    if (!(prjMenuSection.classList.contains('js-hide'))) {
-        prjMenuSection.classList.add('js-hide')
+    if (!(mainMenuPopup.classList.contains('js-hide'))) {
+      mainMenuPopup.classList.add('js-hide')
+      mainMenuIcon.classList.remove('css-icon--cross')
+      mainMenuIcon.classList.add('css-icon--menu')
     }
-    if (!(contactsSection.classList.contains('js-hide'))) {
-        contactsSection.classList.add('js-hide')
+    if (!(contactsPopup.classList.contains('js-hide'))) {
+      contactsPopup.classList.add('js-hide')
+      contactsIcon.classList.remove('css-icon--cross')
+      contactsIcon.classList.add('css-icon--info')
     }
   }
   else {
-    mainMenuSection.classList.add('js-hide');
+    prjMenuPopup.classList.add('js-hide');
+    prjMenuIcon.classList.remove('css-icon--cross')
+    prjMenuIcon.classList.add('css-icon--briefcase')
   }
 });
-mainMenuCloseBtn.addEventListener('click', function(event) {
+
+newsBtn.addEventListener('click', function(event) {
   event.preventDefault();
-  if (!(mainMenuSection.classList.contains('js-hide'))) {
-      mainMenuSection.classList.add('js-hide')
-  }
-});
-prjMenuOpenBtn.addEventListener('click', function(event) {
-  event.preventDefault();
-  if (prjMenuSection.classList.contains('js-hide')) {
-    prjMenuSection.classList.remove('js-hide')
-    if (!(newsSection.classList.contains('js-hide'))) {
-        newsSection.classList.add('js-hide')
+  if (newsPopup.classList.contains('js-hide')) {
+    newsPopup.classList.remove('js-hide')
+    newsIcon.classList.remove('css-icon--hot')
+    newsIcon.classList.add('css-icon--cross')
+    if (!(mainMenuPopup.classList.contains('js-hide'))) {
+      mainMenuPopup.classList.add('js-hide')
+      mainMenuIcon.classList.remove('css-icon--cross')
+      mainMenuIcon.classList.add('css-icon--menu')
     }
-    if (!(mainMenuSection.classList.contains('js-hide'))) {
-        mainMenuSection.classList.add('js-hide')
+    if (!(prjMenuPopup.classList.contains('js-hide'))) {
+      prjMenuPopup.classList.add('js-hide')
+      prjMenuIcon.classList.remove('css-icon--cross')
+      prjMenuIcon.classList.add('css-icon--briefcase')
     }
-    if (!(contactsSection.classList.contains('js-hide'))) {
-        contactsSection.classList.add('js-hide')
+    if (!(contactsPopup.classList.contains('js-hide'))) {
+      contactsPopup.classList.add('js-hide')
+      contactsIcon.classList.remove('css-icon--cross')
+      contactsIcon.classList.add('css-icon--info')
     }
   }
   else {
-    prjMenuSection.classList.add('js-hide');
+    newsPopup.classList.add('js-hide');
+    newsIcon.classList.remove('css-icon--cross')
+    newsIcon.classList.add('css-icon--hot')
   }
 });
-prjMenuCloseBtn.addEventListener('click', function(event) {
+
+contactsBtn.addEventListener('click', function(event) {
   event.preventDefault();
-  if (!(prjMenuSection.classList.contains('js-hide'))) {
-      prjMenuSection.classList.add('js-hide')
-  }
-});
-contactsOpenBtn.addEventListener('click', function(event) {
-  event.preventDefault();
-  if (contactsSection.classList.contains('js-hide')) {
-    contactsSection.classList.remove('js-hide')
-    if (!(newsSection.classList.contains('js-hide'))) {
-        newsSection.classList.add('js-hide')
+  if (contactsPopup.classList.contains('js-hide')) {
+    contactsPopup.classList.remove('js-hide')
+    contactsIcon.classList.remove('css-icon--info')
+    contactsIcon.classList.add('css-icon--cross')
+    if (!(newsPopup.classList.contains('js-hide'))) {
+      newsPopup.classList.add('js-hide')
+      newsIcon.classList.remove('css-icon--cross')
+      newsIcon.classList.add('css-icon--hot')
     }
-    if (!(mainMenuSection.classList.contains('js-hide'))) {
-        mainMenuSection.classList.add('js-hide')
+    if (!(mainMenuPopup.classList.contains('js-hide'))) {
+      mainMenuPopup.classList.add('js-hide')
+      mainMenuIcon.classList.remove('css-icon--cross')
+      mainMenuIcon.classList.add('css-icon--menu')
     }
-    if (!(prjMenuSection.classList.contains('js-hide'))) {
-        prjMenuSection.classList.add('js-hide')
+    if (!(prjMenuPopup.classList.contains('js-hide'))) {
+      prjMenuPopup.classList.add('js-hide')
+      prjMenuIcon.classList.remove('css-icon--cross')
+      prjMenuIcon.classList.add('css-icon--briefcase')
     }
   }
   else {
-    contactsSection.classList.add('js-hide');
-  }
-});
-contactsCloseBtn.addEventListener('click', function(event) {
-  event.preventDefault();
-  if (!(contactsSection.classList.contains('js-hide'))) {
-      contactsSection.classList.add('js-hide')
+    contactsPopup.classList.add('js-hide');
+    contactsIcon.classList.remove('css-icon--cross')
+    contactsIcon.classList.add('css-icon--info')
   }
 });
