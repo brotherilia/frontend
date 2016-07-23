@@ -881,38 +881,6 @@ img {
 .main-nav::after {
   display: none;
 }
-.main-nav__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-      flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-
-  -ms-flex-pack: distribute;
-  -ms-flex-wrap: wrap;
-}
-.main-nav__link {
-  padding: 5px 10px;
-
-  font-weight: bold;
-  color: #ca7e7d;
-
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px 0 #ca7e7d;
-}
-.main-nav__link:active {
-  color: #d9a2a1;
-
-  background-color: #f1dbdb;
-  box-shadow: 0 0 1px 0 #ca7e7d;
-}
-.main-nav__link:hover {
-  background-color: #ebcdcd;
-}
 .projects-nav {
   position: absolute;
   top: 64px;
@@ -956,41 +924,6 @@ img {
 }
 .projects-nav::after {
   display: none;
-}
-.projects-nav__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-      flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-
-  -ms-flex-pack: distribute;
-  -ms-flex-wrap: wrap;
-}
-.projects-nav__item {
-  margin: 10px 5px;
-}
-.projects-nav__link {
-  padding: 5px 10px;
-
-  font-weight: bold;
-  color: #ca7e7d;
-
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px 0 #ca7e7d;
-}
-.projects-nav__link:active {
-  color: #d9a2a1;
-
-  background-color: #f1dbdb;
-  box-shadow: 0 0 1px 0 #ca7e7d;
-}
-.projects-nav__link:hover {
-  background-color: #ebcdcd;
 }
 .article {
   margin: 20px;
@@ -1038,6 +971,11 @@ img {
 }
 .article__img-link:active {
   opacity: 1;
+}
+.article__img-link-dsbl {
+  display: block;
+
+  opacity: 0.5;
 }
 .section {
   position: absolute;
@@ -1114,6 +1052,50 @@ img {
   line-height: 18px;
 
   border-bottom: 1px dotted #444444;
+}
+.menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+      flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  -ms-flex-pack: distribute;
+  -ms-flex-wrap: wrap;
+}
+.menu-list__item {
+  margin: 10px 5px;
+}
+.menu-list__link {
+  padding: 5px 10px;
+
+  font-weight: bold;
+  color: #ca7e7d;
+
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 0 #ca7e7d;
+}
+.menu-list__link:active {
+  color: #d9a2a1;
+
+  background-color: #f1dbdb;
+  box-shadow: 0 0 1px 0 #ca7e7d;
+}
+.menu-list__link:hover {
+  background-color: #ebcdcd;
+}
+.menu-list__link-dsbl {
+  padding: 5px 10px;
+
+  font-weight: bold;
+  color: #d9a2a1;
+
+  border-radius: 5px;
+  box-shadow: 0 0 1px 0 #ca7e7d;
 }
 .icon-list {
   display: -webkit-box;
