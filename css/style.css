@@ -462,7 +462,6 @@ p {
   padding: 0;
 
   line-height: 18px;
-  text-align: justify;
 }
 h1,
 h2,
@@ -956,6 +955,8 @@ img {
 }
 .article__text {
   padding: 20px;
+
+  text-align: justify;
 
   background-color: #ffffff;
   border: 1px solid #d9a3a2;
