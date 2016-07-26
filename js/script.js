@@ -14,12 +14,15 @@ var mainMenuPopup = document.querySelector('.js-main-menu'),
     contactsBtn   = document.querySelector('.js-contacts-btn'),
     contactsIcon  = document.querySelector('.js-contacts-icon');
 
+    popupBgr      = document.querySelector('.js-popup-bgr');
+
 mainMenuBtn.addEventListener('click', function(event) {
   event.preventDefault();
   if (mainMenuPopup.classList.contains('js-hide')) {
     mainMenuPopup.classList.remove('js-hide')
     mainMenuIcon.classList.remove('css-icon--menu')
     mainMenuIcon.classList.add('css-icon--cross')
+    popupBgr.classList.remove('js-hide')
     if (!(newsPopup.classList.contains('js-hide'))) {
       newsPopup.classList.add('js-hide')
       newsIcon.classList.remove('css-icon--cross')
@@ -40,6 +43,7 @@ mainMenuBtn.addEventListener('click', function(event) {
     mainMenuPopup.classList.add('js-hide');
     mainMenuIcon.classList.remove('css-icon--cross')
     mainMenuIcon.classList.add('css-icon--menu')
+    popupBgr.classList.add('js-hide')
   }
 });
 
@@ -49,6 +53,7 @@ prjMenuBtn.addEventListener('click', function(event) {
     prjMenuPopup.classList.remove('js-hide')
     prjMenuIcon.classList.remove('css-icon--briefcase')
     prjMenuIcon.classList.add('css-icon--cross')
+    popupBgr.classList.remove('js-hide')
     if (!(newsPopup.classList.contains('js-hide'))) {
       newsPopup.classList.add('js-hide')
       newsIcon.classList.remove('css-icon--cross')
@@ -69,6 +74,7 @@ prjMenuBtn.addEventListener('click', function(event) {
     prjMenuPopup.classList.add('js-hide');
     prjMenuIcon.classList.remove('css-icon--cross')
     prjMenuIcon.classList.add('css-icon--briefcase')
+    popupBgr.classList.add('js-hide')
   }
 });
 
@@ -78,6 +84,7 @@ newsBtn.addEventListener('click', function(event) {
     newsPopup.classList.remove('js-hide')
     newsIcon.classList.remove('css-icon--hot')
     newsIcon.classList.add('css-icon--cross')
+    popupBgr.classList.remove('js-hide')
     if (!(mainMenuPopup.classList.contains('js-hide'))) {
       mainMenuPopup.classList.add('js-hide')
       mainMenuIcon.classList.remove('css-icon--cross')
@@ -98,6 +105,7 @@ newsBtn.addEventListener('click', function(event) {
     newsPopup.classList.add('js-hide');
     newsIcon.classList.remove('css-icon--cross')
     newsIcon.classList.add('css-icon--hot')
+    popupBgr.classList.add('js-hide')
   }
 });
 
@@ -107,6 +115,7 @@ contactsBtn.addEventListener('click', function(event) {
     contactsPopup.classList.remove('js-hide')
     contactsIcon.classList.remove('css-icon--info')
     contactsIcon.classList.add('css-icon--cross')
+    popupBgr.classList.remove('js-hide')
     if (!(newsPopup.classList.contains('js-hide'))) {
       newsPopup.classList.add('js-hide')
       newsIcon.classList.remove('css-icon--cross')
@@ -127,5 +136,33 @@ contactsBtn.addEventListener('click', function(event) {
     contactsPopup.classList.add('js-hide');
     contactsIcon.classList.remove('css-icon--cross')
     contactsIcon.classList.add('css-icon--info')
+    popupBgr.classList.add('js-hide')
+  }
+});
+
+popupBgr.addEventListener('click', function(event) {
+  event.preventDefault();
+  if (!(popupBgr.classList.contains('js-hide'))) {
+    popupBgr.classList.add('js-hide')
+    if (!(newsPopup.classList.contains('js-hide'))) {
+      newsPopup.classList.add('js-hide')
+      newsIcon.classList.remove('css-icon--cross')
+      newsIcon.classList.add('css-icon--hot')
+    }
+    if (!(mainMenuPopup.classList.contains('js-hide'))) {
+      mainMenuPopup.classList.add('js-hide')
+      mainMenuIcon.classList.remove('css-icon--cross')
+      mainMenuIcon.classList.add('css-icon--menu')
+    }
+    if (!(prjMenuPopup.classList.contains('js-hide'))) {
+      prjMenuPopup.classList.add('js-hide')
+      prjMenuIcon.classList.remove('css-icon--cross')
+      prjMenuIcon.classList.add('css-icon--briefcase')
+    }
+    if (!(contactsPopup.classList.contains('js-hide'))) {
+      contactsPopup.classList.add('js-hide')
+      contactsIcon.classList.remove('css-icon--cross')
+      contactsIcon.classList.add('css-icon--info')
+    }
   }
 });
