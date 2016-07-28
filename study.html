@@ -30,22 +30,22 @@
             </a>
           </li>
           <li class="icon-list__item">
-            <button class="icon-list__link js-main-menu-btn">
-              <i class="css-icon css-icon--menu js-main-menu-icon">
+            <button class="icon-list__link js-toggle" id="css-icon--menu" href="#popup-menu">
+              <i class="css-icon css-icon--menu">
                 <div class="css-icon__body"></div>
               </i>
             </button>
           </li>
           <li class="icon-list__item">
-            <button class="icon-list__link js-prj-menu-btn">
-              <i class="css-icon css-icon--briefcase js-prj-menu-icon">
+            <button class="icon-list__link js-toggle" id="css-icon--briefcase" href="#popup-projects">
+              <i class="css-icon css-icon--briefcase">
                 <div class="css-icon__body"></div>
               </i>
             </button>
           </li>
           <li class="icon-list__item">
-            <button class="icon-list__link js-news-btn">
-              <i class="css-icon css-icon--hot js-news-icon">
+            <button class="icon-list__link js-toggle" id="css-icon--hot" href="#popup-news">
+              <i class="css-icon css-icon--hot">
                 <div class="css-icon__body"></div>
               </i>
             </button>
@@ -76,8 +76,7 @@
         <!--                          MAIN NAV                            -->
         <!--                                                              -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <div class="popup-bgr js-popup-bgr js-hide"></div>
-        <nav class="main-nav js-main-menu js-hide">
+        <nav class="main-nav js-popup" id="popup-menu">
           <ul class="menu-list">
             <li class="menu-list__item">
               <a class="menu-list__link" href="index.html">Главная</a>
@@ -102,7 +101,7 @@
         <!--                        PROJECTS NAV                          -->
         <!--                                                              -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <nav class="projects-nav js-prj-menu js-hide">
+        <nav class="projects-nav js-popup" id="popup-projects">
           <ul class="menu-list">
             <li class="menu-list__item">
               <a class="menu-list__link" href="http://menshikov.su/">menshikov.su</a>
@@ -226,7 +225,7 @@
                   Соответствие критериям:
                 </td>
                 <td class="common-table__td">
-                  <a class="inline-link js-crt-basic-open" href="#top">Посмотреть</a>
+                  <a class="inline-link js-toggle" href="#popup-crt-basic" id="crt-basic-link">Посмотреть</a>
                 </td>
               </tr>
               <tr>
@@ -238,6 +237,179 @@
                 </td>
               </tr>
             </table>
+            <div class="section section--common js-popup" id="popup-crt-basic">
+              <ul class="icon-list icon-list--close-btn">
+                <li class="icon-list__item">
+                  <button class="icon-list__link js-close">
+                    <i class="css-icon css-icon--cross">
+                      <div class="css-icon__body"></div>
+                    </i>
+                  </button>
+                </li>
+              </ul>
+              <h2 class="section__title">
+                Базовые критерии
+              </h2>
+              <h3 class="section__subtitle">
+                Разметка
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Б1. Выполнена HTML-разметка всех страниц и всех элементов на страницах.
+                </li>
+                <li class="section__item">
+                  Б2. К страницам подключён один стилевой файл (с учётом normalize.css или reset.css к каждой странице могут быть подключены два файла).
+                </li>
+                <li class="section__item">
+                  Б3. Стилевой файл подключён внутри &lt;head&gt;.
+                </li>
+                <li class="section__item">
+                  Б4. Грубые ошибки в разметке отсутствуют. Например: ссылки сделаны не тегом &lt;a&gt;, а другими тегами; использование строчных элементов для создания крупных (сеточных) блоков; абзацы сделаны не тегами &lt;p&gt;, а &lt;br&gt; &lt;br&gt;.
+                </li>
+                <li class="section__item">
+                  Б5. Документ проходит проверку на валидность http://validator.w3.org/nu/.
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                Стилизация
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Б6. Вся собственная стилизация выполнена в одном стилевом файле.
+                </li>
+                <li class="section__item">
+                  Б7. Раскладка блоков на странице сделана не с помощью таблиц или позиционирования.
+                </li>
+                <li class="section__item">
+                  Б8. В CSS отсутствует !important. Допускается использование !important при обосновании его необходимости в комментарии.
+                </li>
+                <li class="section__item">
+                  Б9. Подключены правильные шрифты, их размеры и толщина соответствуют размерам в макетах и ТЗ.
+                </li>
+                <li class="section__item">
+                  Б10. Указаны альтернативные варианты шрифта и тип семейства в конце перечисления font-family.
+                </li>
+                <li class="section__item">
+                  Б11. При наполнении контентом (как в макете) элементы каждой страницы соответствуют макету, но допускаются: различия в 5 пикселей по высоте (при расстояниях более 30 пикселей) и 2 пикселя по ширине; отсутствие стилизации кастомных элементов форм; различия в отображении шрифтов, связанные со сглаживанием на различных платформах.
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                Тестирование
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Б12. Вёрстка идентично отображается в последних версиях браузеров Chrome, Opera, Firefox, Safari, а также в Internet Explorer 10+.
+                </li>
+                <li class="section__item">
+                  Б13. Сайт нормально смотрится на минимальном для макета разрешении. padding по краям контейнера указывается для того, чтобы контент не прижимался к краям экрана на минимальном разрешении. При большем размере экрана макет должен оставаться по центру и не иметь горизонтального скролла. На разрешениях экрана меньше ширины контейнера вёрстка не должна менять свою структуру.
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                Разное
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Б14. В корне документа имеются папки css, img, js или аналогичные. Главная страница имеет название index.html. В названиях и расширениях файлов нет заглавных букв и пробелов, использованы только латинские символы.
+                </li>
+                <li class="section__item">
+                  Б15. Единообразное написание и форматирование кода в HTML, CSS и JavaScript.
+                </li>
+                <li class="section__item">
+                  Б16. Выбран подходящий формат изображений. Например: JPEG для фотографий; PNG или SVG для всех прочих.
+                </li>
+              </ul>
+              <h2 class="section__title">
+                Дополнительные критерии
+              </h2>
+              <h3 class="section__subtitle">
+                Разметка
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Д1. У всех изображений в теге &lt;img&gt; прописан размер.
+                </li>
+                <li class="section__item">
+                  Д2. Использовано минимально возможное количество HTML-элементов (нет лишних элементов).
+                </li>
+                <li class="section__item">
+                  Д3. Все скрипты подключены непосредственно перед &lt;/body&gt;.
+                </li>
+                <li class="section__item">
+                  Д4. Названия полей форм привязаны к своим полям с помощью &lt;label&gt;.
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                Стилизация
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Д5. Использованы normalize.css или reset.css (но не оба сразу).
+                </li>
+                <li class="section__item">
+                  Д6. Для стилизации не использованы #id.
+                </li>
+                <li class="section__item">
+                  Д7. Нет вложенности селекторов больше двух.
+                </li>
+                <li class="section__item">
+                  Д8. Явно указано подходящее vertical-align для потоковых блоков с display: inline-block.
+                </li>
+                <li class="section__item">
+                  Д9. Для CSS-свойств с префиксом указан его вариант без префикса и это указание идёт последним.
+                </li>
+                <li class="section__item">
+                  Д10. Для блока у которого есть фоновое изображение прописан фоновый цвет, который соответствует преобладающему цвету изображения (пока изображение не загружено, страница выглядит похоже на макет).
+                </li>
+                <li class="section__item">
+                  Д11. Все состояния элементов (смотрите styleguide.psd) прописаны в стилевом файле.
+                </li>
+                <li class="section__item">
+                  Д12. Файл стилей представлен в двух вариантах: с форматированием и минимизированный, к странице подключён минимизированный.
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                JavaScript
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Д13. JavaScript-файл представлен в двух вариантах: с форматированием и минимизированный, к странице подключён минимизированный.
+                </li>
+                <li class="section__item">
+                  Д14. С помощью JavaScript реализовано открытие/закрытие окна с формой (без вспомогательных библиотек).
+                </li>
+                <li class="section__item">
+                  Д15. С помощью JavaScript добавлена анимация формы (без вспомогательных библиотек).
+                </li>
+                <li class="section__item">
+                  Д16. Добавлена интерактивная карта (допускается подключение с помощью iframe).
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                Тестирование
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Д17. Вёрстка проходит тест на переполнение контентом: не ломается при добавлении в элементы большего количества текста; не ломается при использовании картинок с неподходящими размерами; не ломается при изменении количества потоковых блоков. Текст не выпадает из блоков, нижерасположенные блоки не скрываются, смещение блоков в потоке сохраняет логику потока (не приводит к нарушению сетки).
+                </li>
+                <li class="section__item">
+                  Д18. Критический функционал сайта работоспособен без JavaScript (использовано прогрессивное улучшение). Например: все формы являются работоспособными без JavaScript; элементы, вызывающие появление попапов, являются ссылками, ведущими на отдельные страницы; интерактивная карта без JavaScript показывает статичную картинку с картой.
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                Разное
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Д19. Отсутствует транслит в названиях классов, атрибутах и так далее.
+                </li>
+                <li class="section__item">
+                  Д20. При взаимодействии с элементами (наведение, нажатие) ни сам элемент, ни окружающие его блоки не меняют своего положения (если иное не прописано в ТЗ или slyleguide.psd).
+                </li>
+                <li class="section__item">
+                  Д21. Проведена базовая оптимизация: минифицированы стили и скрипты, использован спрайт или иконочный шрифт (можно оба).
+                </li>
+              </ul>
+            </div>
           </div>
         </article>
         <article class="article">
@@ -307,7 +479,7 @@
                   Соответствие критериям:
                 </td>
                 <td class="common-table__td">
-                  <a class="inline-link js-crt-advanced-open" href="#top">Посмотреть</a>
+                  <a class="inline-link js-toggle" href="#popup-crt-advanced" id="crt-advanced-link">Посмотреть</a>
                 </td>
               </tr>
               <tr>
@@ -319,6 +491,218 @@
                 </td>
               </tr>
             </table>
+            <div class="section section--common js-popup" id="popup-crt-advanced">
+              <ul class="icon-list icon-list--close-btn">
+                <li class="icon-list__item">
+                  <button class="icon-list__link js-close">
+                    <i class="css-icon css-icon--cross">
+                      <div class="css-icon__body"></div>
+                    </i>
+                  </button>
+                </li>
+              </ul>
+              <h2 class="section__title">
+                Базовые критерии
+              </h2>
+              <h3 class="section__subtitle">
+                Разметка
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Б1. Выполнена HTML-разметка всех страниц проекта и всех элементов на этих страницах.
+                </li>
+                <li class="section__item">
+                  Б2. Грубые ошибки в разметке отсутствуют.
+                </li>
+                <li class="section__item">
+                  Б3. Документ проходит проверку на валидность http://validator.w3.org/nu/.
+                </li>
+                <li class="section__item">
+                  Б4. В разметке отсутствует дублирование кода для одного и того же элемента, с помощью которых элемент отображается в разных местах страницы на разных версиях: мобильной, десктопной, планшетной. Этот критерий не касается элементов, которые скрываются или показываются в разных версиях.
+                </li>
+                <li class="section__item">
+                  Б5. Отсутствуют типовые ошибки в разметке по методологии БЭМ.
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                Стилизация
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Б6. Раскладка блоков на странице сделана не с помощью таблиц или позиционирования.
+                </li>
+                <li class="section__item">
+                  Б7. В CSS отсутствует !important.
+                </li>
+                <li class="section__item">
+                  Б8. Подключены правильные шрифты, их размеры, цвета и жирность соответствуют размерам, цветам и жирности в макетах и техническом задании.
+                </li>
+                <li class="section__item">
+                  Б9. Нестандартные шрифты подключены локально. Формат шрифтов должен быть woff и woff2.
+                </li>
+                <li class="section__item">
+                  Б10. Указаны альтернативные варианты шрифта и тип семейства в конце перечисления font-family.
+                </li>
+                <li class="section__item">
+                  Б11. При наполнении контентом (как в макете) элементы каждой версии страницы (мобильной, планшетной и десктопной) соответствуют макету.
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                CSS-препроцессор
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Б12. Использован CSS-препроцессор.
+                </li>
+                <li class="section__item">
+                  Б13. Код стилей должен быть разбит на несколько частей.
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                Адаптивность
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Б14. Выполнена вёрстка трёх состояний каждой страницы: мобильной, планшетной и десктопной.
+                </li>
+                <li class="section__item">
+                  Б15. Адаптивность должна работать на планшетах и мобильных устройствах.
+                </li>
+                <li class="section__item">
+                  Б16. Использованы флексбоксы.
+                </li>
+                <li class="section__item">
+                  Б17. Выполнена ретинизация растровой графики.
+                </li>
+                <li class="section__item">
+                  Б18. Использована векторная графика.
+                </li>
+                <li class="section__item">
+                  Б19. Логотип должен адаптироваться.
+                </li>
+                <li class="section__item">
+                  Б20. Выполнено кадрирование контентных изображений.
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                Оптимизация
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Б21. «Нежная» ретинизация.
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                Сборка проекта
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Б22. Процесс сборки личного проекта должен быть настроен с помощью инструментов Грант или Галп.
+                </li>
+                <li class="section__item">
+                  Б23. Все зависимости проекта должны быть указаны в файле package.json. Команда npm i должна установить всё необходимое для того, чтобы сборка проекта работала.
+                </li>
+                <li class="section__item">
+                  Б24. Сборка проекта должна запускаться командой npm run build.
+                </li>
+                <li class="section__item">
+                  Б25. В результате сборки должна получаться папка build со всеми необходимыми файлами.
+                </li>
+                <li class="section__item">
+                  Б26. Папка build со всем её содержимым не должна попадать в Гитхаб.
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                Разное
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Б27. Вёрстка идентично отображается в последних версиях браузеров Chrome, Opera, Firefox, Safari, Edge, а также в Internet Explorer 11.
+                </li>
+                <li class="section__item">
+                  Б28. Единообразное написание и форматирование кода в HTML, файлах CSS-препроцессора и JavaScript (включая файлы автоматизации).
+                </li>
+                <li class="section__item">
+                  Б29. Отсутствует транслит в названиях классов, атрибутах, переменных CSS-препроцессора, названиях примесей и так далее.
+                </li>
+                <li class="section__item">
+                  Б30. Мобильное меню должно быть работоспособным на мобильной версии при отключенном JavaScript.
+                </li>
+              </ul>
+              <h2 class="section__title">
+                Дополнительные критерии
+              </h2>
+              <h3 class="section__subtitle">
+                Разметка
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Д1. У всех векторных изображений размер прописан в теге &lt;img&gt;, у встроенных SVG-изображений размер прописан в теге &lt;svg&gt;.
+                </li>
+                <li class="section__item">
+                  Д2. Использовано минимально возможное количество HTML-элементов (нет лишних элементов).
+                </li>
+                <li class="section__item">
+                  Д3. Названия полей форм привязаны к своим полям с помощью &lt;label&gt;.
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                Стилизация
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Д4. Для стилизации не использованы #id.
+                </li>
+                <li class="section__item">
+                  Д5. Явно указано подходящее vertical-align для потоковых блоков с display: inline-block.
+                </li>
+                <li class="section__item">
+                  Д6. Для блока, у которого есть фоновое изображение, прописан фоновый цвет, который соответствует преобладающему цвету изображения (пока изображение не загружено, страница выглядит похоже на макет).
+                </li>
+                <li class="section__item">
+                  Д7. Все состояния элементов (смотрите styleguide.psd) прописаны в стилевом файле.
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                CSS-препроцессор
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Д8. Цветовые функции могут использоваться только для изменения альфа-канала цвета.
+                </li>
+                <li class="section__item">
+                  Д9. Примеси не используются для генерации правил с вендорными префиксами.
+                </li>
+                <li class="section__item">
+                  Д10. Нет вложенности больше двух уровней.
+                </li>
+                <li class="section__item">
+                  Д11. Верное использование &amp; в стилевых файлах.
+                </li>
+                <li class="section__item">
+                  Д12. Не используются расширения (extend).
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                Тестирование
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Д13. Вёрстка проходит тест на переполнение контентом.
+                </li>
+                <li class="section__item">
+                  Д14. Критическая функциональность сайта работоспособна без JavaScript (использовано прогрессивное улучшение).
+                </li>
+              </ul>
+              <h3 class="section__subtitle">
+                Разное
+              </h3>
+              <ul class="section__items">
+                <li class="section__item">
+                  Д15. При взаимодействии с элементами (наведение, нажатие) ни сам элемент, ни окружающие его блоки не меняют своего положения (если иное не прописано в техническом задании или slyleguide.psd).
+                </li>
+              </ul>
+            </div>
           </div>
         </article>
       </main>
@@ -328,7 +712,7 @@
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <aside class="page-aside-right">
-        <section class="section section--news js-news js-hide">
+        <section class="section section--news js-popup" id="popup-news">
           <h2 class="section__title">
             Новости
           </h2>
@@ -401,7 +785,7 @@
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <footer class="page-footer">
-        <section class="section section--contacts js-contacts js-hide">
+        <section class="section section--contacts js-popup" id="popup-contacts">
           <ul class="icon-list">
             <li class="icon-list__item">
               <a class="icon-list__link" href="mailto:ilyamenshikov@gmail.com">
@@ -449,413 +833,23 @@
             </a>
           </li>
           <li class="icon-list__item">
-            <a class="icon-list__link" href="#top">
+            <a class="icon-list__link" id="to-top" href="#top">
               <i class="css-icon css-icon--up-arrow">
                 <div class="css-icon__body"></div>
               </i>
             </a>
           </li>
           <li class="icon-list__item">
-            <button class="icon-list__link js-contacts-btn">
-              <i class="css-icon css-icon--info js-contacts-icon">
+            <button class="icon-list__link js-toggle" id="css-icon--info" href="#popup-contacts">
+              <i class="css-icon css-icon--info">
                 <div class="css-icon__body"></div>
               </i>
             </button>
           </li>
         </ul>
       </nav>
-      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <!--                                                              -->
-      <!--                            POPUPS                            -->
-      <!--                                                              -->
-      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <div class="section section--common js-crt-basic-popup js-hide">
-        <ul class="icon-list icon-list--close-btn">
-          <li class="icon-list__item">
-            <button class="icon-list__link js-crt-basic-close">
-              <i class="css-icon css-icon--cross">
-                <div class="css-icon__body"></div>
-              </i>
-            </button>
-          </li>
-        </ul>
-        <h2 class="section__title">
-          Базовые критерии
-        </h2>
-        <h3 class="section__subtitle">
-          Разметка
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Б1. Выполнена HTML-разметка всех страниц и всех элементов на страницах.
-          </li>
-          <li class="section__item">
-            Б2. К страницам подключён один стилевой файл (с учётом normalize.css или reset.css к каждой странице могут быть подключены два файла).
-          </li>
-          <li class="section__item">
-            Б3. Стилевой файл подключён внутри &lt;head&gt;.
-          </li>
-          <li class="section__item">
-            Б4. Грубые ошибки в разметке отсутствуют. Например: ссылки сделаны не тегом &lt;a&gt;, а другими тегами; использование строчных элементов для создания крупных (сеточных) блоков; абзацы сделаны не тегами &lt;p&gt;, а &lt;br&gt; &lt;br&gt;.
-          </li>
-          <li class="section__item">
-            Б5. Документ проходит проверку на валидность http://validator.w3.org/nu/.
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          Стилизация
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Б6. Вся собственная стилизация выполнена в одном стилевом файле.
-          </li>
-          <li class="section__item">
-            Б7. Раскладка блоков на странице сделана не с помощью таблиц или позиционирования.
-          </li>
-          <li class="section__item">
-            Б8. В CSS отсутствует !important. Допускается использование !important при обосновании его необходимости в комментарии.
-          </li>
-          <li class="section__item">
-            Б9. Подключены правильные шрифты, их размеры и толщина соответствуют размерам в макетах и ТЗ.
-          </li>
-          <li class="section__item">
-            Б10. Указаны альтернативные варианты шрифта и тип семейства в конце перечисления font-family.
-          </li>
-          <li class="section__item">
-            Б11. При наполнении контентом (как в макете) элементы каждой страницы соответствуют макету, но допускаются: различия в 5 пикселей по высоте (при расстояниях более 30 пикселей) и 2 пикселя по ширине; отсутствие стилизации кастомных элементов форм; различия в отображении шрифтов, связанные со сглаживанием на различных платформах.
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          Тестирование
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Б12. Вёрстка идентично отображается в последних версиях браузеров Chrome, Opera, Firefox, Safari, а также в Internet Explorer 10+.
-          </li>
-          <li class="section__item">
-            Б13. Сайт нормально смотрится на минимальном для макета разрешении. padding по краям контейнера указывается для того, чтобы контент не прижимался к краям экрана на минимальном разрешении. При большем размере экрана макет должен оставаться по центру и не иметь горизонтального скролла. На разрешениях экрана меньше ширины контейнера вёрстка не должна менять свою структуру.
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          Разное
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Б14. В корне документа имеются папки css, img, js или аналогичные. Главная страница имеет название index.html. В названиях и расширениях файлов нет заглавных букв и пробелов, использованы только латинские символы.
-          </li>
-          <li class="section__item">
-            Б15. Единообразное написание и форматирование кода в HTML, CSS и JavaScript.
-          </li>
-          <li class="section__item">
-            Б16. Выбран подходящий формат изображений. Например: JPEG для фотографий; PNG или SVG для всех прочих.
-          </li>
-        </ul>
-        <h2 class="section__title">
-          Дополнительные критерии
-        </h2>
-        <h3 class="section__subtitle">
-          Разметка
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Д1. У всех изображений в теге &lt;img&gt; прописан размер.
-          </li>
-          <li class="section__item">
-            Д2. Использовано минимально возможное количество HTML-элементов (нет лишних элементов).
-          </li>
-          <li class="section__item">
-            Д3. Все скрипты подключены непосредственно перед &lt;/body&gt;.
-          </li>
-          <li class="section__item">
-            Д4. Названия полей форм привязаны к своим полям с помощью &lt;label&gt;.
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          Стилизация
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Д5. Использованы normalize.css или reset.css (но не оба сразу).
-          </li>
-          <li class="section__item">
-            Д6. Для стилизации не использованы #id.
-          </li>
-          <li class="section__item">
-            Д7. Нет вложенности селекторов больше двух.
-          </li>
-          <li class="section__item">
-            Д8. Явно указано подходящее vertical-align для потоковых блоков с display: inline-block.
-          </li>
-          <li class="section__item">
-            Д9. Для CSS-свойств с префиксом указан его вариант без префикса и это указание идёт последним.
-          </li>
-          <li class="section__item">
-            Д10. Для блока у которого есть фоновое изображение прописан фоновый цвет, который соответствует преобладающему цвету изображения (пока изображение не загружено, страница выглядит похоже на макет).
-          </li>
-          <li class="section__item">
-            Д11. Все состояния элементов (смотрите styleguide.psd) прописаны в стилевом файле.
-          </li>
-          <li class="section__item">
-            Д12. Файл стилей представлен в двух вариантах: с форматированием и минимизированный, к странице подключён минимизированный.
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          JavaScript
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Д13. JavaScript-файл представлен в двух вариантах: с форматированием и минимизированный, к странице подключён минимизированный.
-          </li>
-          <li class="section__item">
-            Д14. С помощью JavaScript реализовано открытие/закрытие окна с формой (без вспомогательных библиотек).
-          </li>
-          <li class="section__item">
-            Д15. С помощью JavaScript добавлена анимация формы (без вспомогательных библиотек).
-          </li>
-          <li class="section__item">
-            Д16. Добавлена интерактивная карта (допускается подключение с помощью iframe).
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          Тестирование
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Д17. Вёрстка проходит тест на переполнение контентом: не ломается при добавлении в элементы большего количества текста; не ломается при использовании картинок с неподходящими размерами; не ломается при изменении количества потоковых блоков. Текст не выпадает из блоков, нижерасположенные блоки не скрываются, смещение блоков в потоке сохраняет логику потока (не приводит к нарушению сетки).
-          </li>
-          <li class="section__item">
-            Д18. Критический функционал сайта работоспособен без JavaScript (использовано прогрессивное улучшение). Например: все формы являются работоспособными без JavaScript; элементы, вызывающие появление попапов, являются ссылками, ведущими на отдельные страницы; интерактивная карта без JavaScript показывает статичную картинку с картой.
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          Разное
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Д19. Отсутствует транслит в названиях классов, атрибутах и так далее.
-          </li>
-          <li class="section__item">
-            Д20. При взаимодействии с элементами (наведение, нажатие) ни сам элемент, ни окружающие его блоки не меняют своего положения (если иное не прописано в ТЗ или slyleguide.psd).
-          </li>
-          <li class="section__item">
-            Д21. Проведена базовая оптимизация: минифицированы стили и скрипты, использован спрайт или иконочный шрифт (можно оба).
-          </li>
-        </ul>
-      </div>
-      <div class="section section--common js-crt-advanced-popup js-hide">
-        <ul class="icon-list icon-list--close-btn">
-          <li class="icon-list__item">
-            <button class="icon-list__link js-crt-advanced-close">
-              <i class="css-icon css-icon--cross">
-                <div class="css-icon__body"></div>
-              </i>
-            </button>
-          </li>
-        </ul>
-        <h2 class="section__title">
-          Базовые критерии
-        </h2>
-        <h3 class="section__subtitle">
-          Разметка
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Б1. Выполнена HTML-разметка всех страниц проекта и всех элементов на этих страницах.
-          </li>
-          <li class="section__item">
-            Б2. Грубые ошибки в разметке отсутствуют.
-          </li>
-          <li class="section__item">
-            Б3. Документ проходит проверку на валидность http://validator.w3.org/nu/.
-          </li>
-          <li class="section__item">
-            Б4. В разметке отсутствует дублирование кода для одного и того же элемента, с помощью которых элемент отображается в разных местах страницы на разных версиях: мобильной, десктопной, планшетной. Этот критерий не касается элементов, которые скрываются или показываются в разных версиях.
-          </li>
-          <li class="section__item">
-            Б5. Отсутствуют типовые ошибки в разметке по методологии БЭМ.
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          Стилизация
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Б6. Раскладка блоков на странице сделана не с помощью таблиц или позиционирования.
-          </li>
-          <li class="section__item">
-            Б7. В CSS отсутствует !important.
-          </li>
-          <li class="section__item">
-            Б8. Подключены правильные шрифты, их размеры, цвета и жирность соответствуют размерам, цветам и жирности в макетах и техническом задании.
-          </li>
-          <li class="section__item">
-            Б9. Нестандартные шрифты подключены локально. Формат шрифтов должен быть woff и woff2.
-          </li>
-          <li class="section__item">
-            Б10. Указаны альтернативные варианты шрифта и тип семейства в конце перечисления font-family.
-          </li>
-          <li class="section__item">
-            Б11. При наполнении контентом (как в макете) элементы каждой версии страницы (мобильной, планшетной и десктопной) соответствуют макету.
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          CSS-препроцессор
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Б12. Использован CSS-препроцессор.
-          </li>
-          <li class="section__item">
-            Б13. Код стилей должен быть разбит на несколько частей.
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          Адаптивность
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Б14. Выполнена вёрстка трёх состояний каждой страницы: мобильной, планшетной и десктопной.
-          </li>
-          <li class="section__item">
-            Б15. Адаптивность должна работать на планшетах и мобильных устройствах.
-          </li>
-          <li class="section__item">
-            Б16. Использованы флексбоксы.
-          </li>
-          <li class="section__item">
-            Б17. Выполнена ретинизация растровой графики.
-          </li>
-          <li class="section__item">
-            Б18. Использована векторная графика.
-          </li>
-          <li class="section__item">
-            Б19. Логотип должен адаптироваться.
-          </li>
-          <li class="section__item">
-            Б20. Выполнено кадрирование контентных изображений.
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          Оптимизация
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Б21. «Нежная» ретинизация.
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          Сборка проекта
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Б22. Процесс сборки личного проекта должен быть настроен с помощью инструментов Грант или Галп.
-          </li>
-          <li class="section__item">
-            Б23. Все зависимости проекта должны быть указаны в файле package.json. Команда npm i должна установить всё необходимое для того, чтобы сборка проекта работала.
-          </li>
-          <li class="section__item">
-            Б24. Сборка проекта должна запускаться командой npm run build.
-          </li>
-          <li class="section__item">
-            Б25. В результате сборки должна получаться папка build со всеми необходимыми файлами.
-          </li>
-          <li class="section__item">
-            Б26. Папка build со всем её содержимым не должна попадать в Гитхаб.
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          Разное
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Б27. Вёрстка идентично отображается в последних версиях браузеров Chrome, Opera, Firefox, Safari, Edge, а также в Internet Explorer 11.
-          </li>
-          <li class="section__item">
-            Б28. Единообразное написание и форматирование кода в HTML, файлах CSS-препроцессора и JavaScript (включая файлы автоматизации).
-          </li>
-          <li class="section__item">
-            Б29. Отсутствует транслит в названиях классов, атрибутах, переменных CSS-препроцессора, названиях примесей и так далее.
-          </li>
-          <li class="section__item">
-            Б30. Мобильное меню должно быть работоспособным на мобильной версии при отключенном JavaScript.
-          </li>
-        </ul>
-        <h2 class="section__title">
-          Дополнительные критерии
-        </h2>
-        <h3 class="section__subtitle">
-          Разметка
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Д1. У всех векторных изображений размер прописан в теге &lt;img&gt;, у встроенных SVG-изображений размер прописан в теге &lt;svg&gt;.
-          </li>
-          <li class="section__item">
-            Д2. Использовано минимально возможное количество HTML-элементов (нет лишних элементов).
-          </li>
-          <li class="section__item">
-            Д3. Названия полей форм привязаны к своим полям с помощью &lt;label&gt;.
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          Стилизация
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Д4. Для стилизации не использованы #id.
-          </li>
-          <li class="section__item">
-            Д5. Явно указано подходящее vertical-align для потоковых блоков с display: inline-block.
-          </li>
-          <li class="section__item">
-            Д6. Для блока, у которого есть фоновое изображение, прописан фоновый цвет, который соответствует преобладающему цвету изображения (пока изображение не загружено, страница выглядит похоже на макет).
-          </li>
-          <li class="section__item">
-            Д7. Все состояния элементов (смотрите styleguide.psd) прописаны в стилевом файле.
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          CSS-препроцессор
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Д8. Цветовые функции могут использоваться только для изменения альфа-канала цвета.
-          </li>
-          <li class="section__item">
-            Д9. Примеси не используются для генерации правил с вендорными префиксами.
-          </li>
-          <li class="section__item">
-            Д10. Нет вложенности больше двух уровней.
-          </li>
-          <li class="section__item">
-            Д11. Верное использование &amp; в стилевых файлах.
-          </li>
-          <li class="section__item">
-            Д12. Не используются расширения (extend).
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          Тестирование
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Д13. Вёрстка проходит тест на переполнение контентом.
-          </li>
-          <li class="section__item">
-            Д14. Критическая функциональность сайта работоспособна без JavaScript (использовано прогрессивное улучшение).
-          </li>
-        </ul>
-        <h3 class="section__subtitle">
-          Разное
-        </h3>
-        <ul class="section__items">
-          <li class="section__item">
-            Д15. При взаимодействии с элементами (наведение, нажатие) ни сам элемент, ни окружающие его блоки не меняют своего положения (если иное не прописано в техническом задании или slyleguide.psd).
-          </li>
-        </ul>
-      </div>
     </div>
+    <script src="js/jquery.js"></script>
     <script src="js/script.min.js"></script>
-    <script src="js/criteria-popups.min.js"></script>
   </body>
 </html>

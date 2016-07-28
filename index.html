@@ -30,22 +30,22 @@
             </a>
           </li>
           <li class="icon-list__item">
-            <button class="icon-list__link js-main-menu-btn">
-              <i class="css-icon css-icon--menu js-main-menu-icon">
+            <button class="icon-list__link js-toggle" id="css-icon--menu" href="#popup-menu">
+              <i class="css-icon css-icon--menu">
                 <div class="css-icon__body"></div>
               </i>
             </button>
           </li>
           <li class="icon-list__item">
-            <button class="icon-list__link js-prj-menu-btn">
-              <i class="css-icon css-icon--briefcase js-prj-menu-icon">
+            <button class="icon-list__link js-toggle" id="css-icon--briefcase" href="#popup-projects">
+              <i class="css-icon css-icon--briefcase">
                 <div class="css-icon__body"></div>
               </i>
             </button>
           </li>
           <li class="icon-list__item">
-            <button class="icon-list__link js-news-btn">
-              <i class="css-icon css-icon--hot js-news-icon">
+            <button class="icon-list__link js-toggle" id="css-icon--hot" href="#popup-news">
+              <i class="css-icon css-icon--hot">
                 <div class="css-icon__body"></div>
               </i>
             </button>
@@ -76,8 +76,7 @@
         <!--                          MAIN NAV                            -->
         <!--                                                              -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <div class="popup-bgr js-popup-bgr js-hide"></div>
-        <nav class="main-nav js-main-menu js-hide">
+        <nav class="main-nav js-popup" id="popup-menu">
           <ul class="menu-list">
             <li class="menu-list__item">
               <a class="menu-list__link" href="index.html">Главная</a>
@@ -102,7 +101,7 @@
         <!--                        PROJECTS NAV                          -->
         <!--                                                              -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <nav class="projects-nav js-prj-menu js-hide">
+        <nav class="projects-nav js-popup" id="popup-projects">
           <ul class="menu-list">
             <li class="menu-list__item">
               <a class="menu-list__link" href="http://menshikov.su/">menshikov.su</a>
@@ -240,7 +239,7 @@
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <aside class="page-aside-right">
-        <section class="section section--news js-news js-hide">
+        <section class="section section--news js-popup" id="popup-news">
           <h2 class="section__title">
             Новости
           </h2>
@@ -313,7 +312,7 @@
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <footer class="page-footer">
-        <section class="section section--contacts js-contacts js-hide">
+        <section class="section section--contacts js-popup" id="popup-contacts">
           <ul class="icon-list">
             <li class="icon-list__item">
               <a class="icon-list__link" href="mailto:ilyamenshikov@gmail.com">
@@ -361,15 +360,15 @@
             </a>
           </li>
           <li class="icon-list__item">
-            <a class="icon-list__link" href="#top">
+            <a class="icon-list__link" id="to-top" href="#top">
               <i class="css-icon css-icon--up-arrow">
                 <div class="css-icon__body"></div>
               </i>
             </a>
           </li>
           <li class="icon-list__item">
-            <button class="icon-list__link js-contacts-btn">
-              <i class="css-icon css-icon--info js-contacts-icon">
+            <button class="icon-list__link js-toggle" id="css-icon--info" href="#popup-contacts">
+              <i class="css-icon css-icon--info">
                 <div class="css-icon__body"></div>
               </i>
             </button>
@@ -377,6 +376,7 @@
         </ul>
       </nav>
     </div>
+    <script src="js/jquery.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>
