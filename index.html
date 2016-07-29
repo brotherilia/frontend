@@ -17,60 +17,47 @@
     <div class="overall-wrapper">
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <!--                                                              -->
-      <!--                      MOBILE NAV TOP                          -->
-      <!--                                                              -->
-      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <nav class="mobile-nav">
-        <ul class="icon-list">
-          <li class="icon-list__item">
-            <a class="icon-list__link" href="index.html">
-              <i class="css-icon css-icon--home">
-                <div class="css-icon__body"></div>
-              </i>
-            </a>
-          </li>
-          <li class="icon-list__item">
-            <button class="icon-list__link js-toggle" id="css-icon--menu" href="#popup-menu">
-              <i class="css-icon css-icon--menu">
-                <div class="css-icon__body"></div>
-              </i>
-            </button>
-          </li>
-          <li class="icon-list__item">
-            <button class="icon-list__link js-toggle" id="css-icon--briefcase" href="#popup-projects">
-              <i class="css-icon css-icon--briefcase">
-                <div class="css-icon__body"></div>
-              </i>
-            </button>
-          </li>
-          <li class="icon-list__item">
-            <button class="icon-list__link js-toggle" id="css-icon--hot" href="#popup-news">
-              <i class="css-icon css-icon--hot">
-                <div class="css-icon__body"></div>
-              </i>
-            </button>
-          </li>
-        </ul>
-      </nav>
-      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <!--                                                              -->
       <!--                         PAGE HEADER                          -->
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <header class="page-header">
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <!--                                                              -->
-        <!--                            LOGO                              -->
+        <!--                      MOBILE NAV TOP                          -->
         <!--                                                              -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <div class="logo">
-          <div class="logo__ilya">
-            <img src="img/logo.png" alt="" width="100" height="65">
-          </div>
-          <div class="logo__menshikov">
-            Menshikov
-          </div>
-        </div>
+        <nav class="mobile-nav mobile-nav--top">
+          <ul class="icon-list">
+            <li class="icon-list__item icon-list__item--home">
+              <a class="icon-list__link" href="index.html">
+                <i class="css-icon css-icon--home">
+                  <div class="css-icon__body"></div>
+                </i>
+              </a>
+            </li>
+            <li class="icon-list__item icon-list__item--menu">
+              <button class="icon-list__link js-toggle" id="css-icon--menu" href="#popup-menu">
+                <i class="css-icon css-icon--menu">
+                  <div class="css-icon__body"></div>
+                </i>
+              </button>
+            </li>
+            <li class="icon-list__item">
+              <button class="icon-list__link js-toggle" id="css-icon--briefcase" href="#popup-projects">
+                <i class="css-icon css-icon--briefcase">
+                  <div class="css-icon__body"></div>
+                </i>
+              </button>
+            </li>
+            <li class="icon-list__item">
+              <button class="icon-list__link js-toggle" id="css-icon--hot" href="#popup-news">
+                <i class="css-icon css-icon--hot">
+                  <div class="css-icon__body"></div>
+                </i>
+              </button>
+            </li>
+          </ul>
+        </nav>
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <!--                                                              -->
         <!--                          MAIN NAV                            -->
@@ -89,6 +76,19 @@
             </li>
           </ul>
         </nav>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                                                              -->
+        <!--                            LOGO                              -->
+        <!--                                                              -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="logo">
+          <div class="logo__ilya">
+            <img src="img/logo.png" alt="" width="100" height="65">
+          </div>
+          <div class="logo__menshikov">
+            Menshikov
+          </div>
+        </div>
       </header>
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <!--                                                              -->
@@ -172,60 +172,60 @@
             <p>
 
             </p>
-            <table class="common-table">
+            <table class="article__table">
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Степень реализации:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   полная
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Адаптивность:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   mobile (в разработке: tablet, desktop, desktop wide)
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Сетка:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   responsive
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Методология:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   БЭМ (именование классов)
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   CSS препроцессор:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   LESS
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Автоматизация:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   Grunt
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Исходные тексты:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   <a class="inline-link" href="https://github.com/brotherilia/frontend">source</a>, <a class="inline-link" href="https://github.com/brotherilia/frontend/tree/gh-pages">build</a>
                 </td>
               </tr>
@@ -239,29 +239,29 @@
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <aside class="page-aside-right">
-        <section class="section section--news js-popup" id="popup-news">
-          <h2 class="section__title">
+        <section class="info info--news js-popup" id="popup-news">
+          <h2 class="info__title">
             Новости
           </h2>
-          <ul class="section__items">
-            <li class="section__item">
-              <time class="section__item-date" datetime="2016-07-25">
+          <ul class="info__items">
+            <li class="info__item">
+              <time class="info__item-date" datetime="2016-07-25">
                 25.07.2016
               </time>
               <p>
                 Переверстан проект <a class="inline-link" href="projects.html#qsign">Q.Sign Studio</a> (БЭМ, препроцессор, автоматизация).
               </p>
             </li>
-            <li class="section__item">
-              <time class="section__item-date" datetime="2016-07-24">
+            <li class="info__item">
+              <time class="info__item-date" datetime="2016-07-24">
                 24.07.2016
               </time>
               <p>
                 Сверстана адаптивная версия проекта <a class="inline-link" href="projects.html#sumerkyng">Sumerkyng</a>.
               </p>
             </li>
-            <li class="section__item">
-              <time class="section__item-date" datetime="2016-07-23">
+            <li class="info__item">
+              <time class="info__item-date" datetime="2016-07-23">
                 23.07.2016
               </time>
               <p>
@@ -271,32 +271,32 @@
                 Добавлен проект <a class="inline-link" href="projects.html#sedona">Sedona</a>.
               </p>
             </li>
-            <li class="section__item">
-              <time class="section__item-date" datetime="2016-01-28">
+            <li class="info__item">
+              <time class="info__item-date" datetime="2016-01-28">
                 28.01.2016
               </time>
               <p>
                 Проект <a class="inline-link" href="projects.html#steed">Honda Steed</a> полностью переверстан.
               </p>
             </li>
-            <li class="section__item">
-              <time class="section__item-date" datetime="2016-01-12">
+            <li class="info__item">
+              <time class="info__item-date" datetime="2016-01-12">
                 12.01.2016
               </time>
               <p>
                 Проект <a class="inline-link" href="projects.html#astowell">Astowell</a> полностью переверстан.
               </p>
             </li>
-            <li class="section__item">
-              <time class="section__item-date" datetime="2015-12-22">
+            <li class="info__item">
+              <time class="info__item-date" datetime="2015-12-22">
                 22.12.2015
               </time>
               <p>
                 Добавлен проект <a class="inline-link" href="projects.html#brandly">Brandly</a>.
               </p>
             </li>
-            <li class="section__item">
-              <time class="section__item-date" datetime="2015-12-15">
+            <li class="info__item">
+              <time class="info__item-date" datetime="2015-12-15">
                 15.12.2015
               </time>
               <p>
@@ -312,7 +312,7 @@
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <footer class="page-footer">
-        <section class="section section--contacts js-popup" id="popup-contacts">
+        <nav class="contacts-nav js-popup" id="popup-contacts">
           <ul class="icon-list">
             <li class="icon-list__item">
               <a class="icon-list__link" href="mailto:ilyamenshikov@gmail.com">
@@ -343,38 +343,38 @@
               </a>
             </li>
           </ul>
-        </section>
+        </nav>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                                                              -->
+        <!--                      MOBILE NAV BOTTOM                       -->
+        <!--                                                              -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <nav class="mobile-nav  mobile-nav--bottom">
+          <ul class="icon-list">
+            <li class="icon-list__item">
+              <a class="icon-list__link" href="index.html">
+                <i class="css-icon css-icon--home">
+                  <div class="css-icon__body"></div>
+                </i>
+              </a>
+            </li>
+            <li class="icon-list__item">
+              <a class="icon-list__link" id="to-top" href="#top">
+                <i class="css-icon css-icon--up-arrow">
+                  <div class="css-icon__body"></div>
+                </i>
+              </a>
+            </li>
+            <li class="icon-list__item icon-list__item--contacts">
+              <button class="icon-list__link js-toggle" id="css-icon--info" href="#popup-contacts">
+                <i class="css-icon css-icon--info">
+                  <div class="css-icon__body"></div>
+                </i>
+              </button>
+            </li>
+          </ul>
+        </nav>
       </footer>
-      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <!--                                                              -->
-      <!--                      MOBILE NAV BOTTOM                       -->
-      <!--                                                              -->
-      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <nav class="mobile-nav">
-        <ul class="icon-list">
-          <li class="icon-list__item">
-            <a class="icon-list__link" href="index.html">
-              <i class="css-icon css-icon--home">
-                <div class="css-icon__body"></div>
-              </i>
-            </a>
-          </li>
-          <li class="icon-list__item">
-            <a class="icon-list__link" id="to-top" href="#top">
-              <i class="css-icon css-icon--up-arrow">
-                <div class="css-icon__body"></div>
-              </i>
-            </a>
-          </li>
-          <li class="icon-list__item">
-            <button class="icon-list__link js-toggle" id="css-icon--info" href="#popup-contacts">
-              <i class="css-icon css-icon--info">
-                <div class="css-icon__body"></div>
-              </i>
-            </button>
-          </li>
-        </ul>
-      </nav>
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/script.min.js"></script>

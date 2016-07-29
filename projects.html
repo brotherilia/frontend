@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Ilya Menshikov's Portfolio</title>
+    <title>Ilya Menshikov's Portfolio: Projects</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" type="image/png" href="favicon.png">
   </head>
@@ -17,60 +17,47 @@
     <div class="overall-wrapper">
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <!--                                                              -->
-      <!--                      MOBILE NAV TOP                          -->
-      <!--                                                              -->
-      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <nav class="mobile-nav">
-        <ul class="icon-list">
-          <li class="icon-list__item">
-            <a class="icon-list__link" href="index.html">
-              <i class="css-icon css-icon--home">
-                <div class="css-icon__body"></div>
-              </i>
-            </a>
-          </li>
-          <li class="icon-list__item">
-            <button class="icon-list__link js-toggle" id="css-icon--menu" href="#popup-menu">
-              <i class="css-icon css-icon--menu">
-                <div class="css-icon__body"></div>
-              </i>
-            </button>
-          </li>
-          <li class="icon-list__item">
-            <button class="icon-list__link js-toggle" id="css-icon--briefcase" href="#popup-projects">
-              <i class="css-icon css-icon--briefcase">
-                <div class="css-icon__body"></div>
-              </i>
-            </button>
-          </li>
-          <li class="icon-list__item">
-            <button class="icon-list__link js-toggle" id="css-icon--hot" href="#popup-news">
-              <i class="css-icon css-icon--hot">
-                <div class="css-icon__body"></div>
-              </i>
-            </button>
-          </li>
-        </ul>
-      </nav>
-      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <!--                                                              -->
       <!--                         PAGE HEADER                          -->
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <header class="page-header">
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <!--                                                              -->
-        <!--                            LOGO                              -->
+        <!--                      MOBILE NAV TOP                          -->
         <!--                                                              -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <div class="logo">
-          <div class="logo__ilya">
-            <img src="img/logo.png" alt="" width="100" height="65">
-          </div>
-          <div class="logo__menshikov">
-            Menshikov
-          </div>
-        </div>
+        <nav class="mobile-nav mobile-nav--top">
+          <ul class="icon-list">
+            <li class="icon-list__item icon-list__item--home">
+              <a class="icon-list__link" href="index.html">
+                <i class="css-icon css-icon--home">
+                  <div class="css-icon__body"></div>
+                </i>
+              </a>
+            </li>
+            <li class="icon-list__item icon-list__item--menu">
+              <button class="icon-list__link js-toggle" id="css-icon--menu" href="#popup-menu">
+                <i class="css-icon css-icon--menu">
+                  <div class="css-icon__body"></div>
+                </i>
+              </button>
+            </li>
+            <li class="icon-list__item">
+              <button class="icon-list__link js-toggle" id="css-icon--briefcase" href="#popup-projects">
+                <i class="css-icon css-icon--briefcase">
+                  <div class="css-icon__body"></div>
+                </i>
+              </button>
+            </li>
+            <li class="icon-list__item">
+              <button class="icon-list__link js-toggle" id="css-icon--hot" href="#popup-news">
+                <i class="css-icon css-icon--hot">
+                  <div class="css-icon__body"></div>
+                </i>
+              </button>
+            </li>
+          </ul>
+        </nav>
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <!--                                                              -->
         <!--                          MAIN NAV                            -->
@@ -89,6 +76,19 @@
             </li>
           </ul>
         </nav>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                                                              -->
+        <!--                            LOGO                              -->
+        <!--                                                              -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="logo">
+          <div class="logo__ilya">
+            <img src="img/logo.png" alt="" width="100" height="65">
+          </div>
+          <div class="logo__menshikov">
+            Menshikov
+          </div>
+        </div>
       </header>
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <!--                                                              -->
@@ -149,60 +149,60 @@
             <p>
               Моя домашняя страница. Использован дизайн представленного ниже проекта <a class="inline-link" href="#qsign">Q.Sign Studio</a>. Адаптивная фиксированная верстка для 3-х вьюпортов. Анимация на CSS и JS.
             </p>
-            <table class="common-table">
+            <table class="article__table">
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Степень реализации:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   полная
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Адаптивность:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   mobile, mobile landscape, desktop
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Сетка:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   fixed
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Методология:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   БЭМ (именование классов)
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   CSS препроцессор:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   LESS
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Автоматизация:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   Grunt
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Исходные тексты:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   <a class="inline-link" href="https://github.com/brotherilia/menshikov.su">source</a>, <a class="inline-link" href="https://github.com/brotherilia/menshikov.su/tree/gh-pages">build</a>
                 </td>
               </tr>
@@ -222,73 +222,73 @@
             <p>
               Личный итоговый проект при прохождении интенсивного курса <a class="inline-link" href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a> в <a class="inline-link" href="https://htmlacademy.ru">HTML Academy</a>. Рабочие страницы: "Главная", "Каталог". На страницах реализован функционал модулей: слайдер, табы, форма обратной связи, отправка в корзину, интерактивная карта.
             </p>
-            <table class="common-table">
+            <table class="article__table">
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Степень реализации:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   верстка
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Адаптивность:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   desktop
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Сетка:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   fixed
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Методология:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   БЭМ (именование классов)
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   CSS препроцессор:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   LESS
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Автоматизация:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   Grunt
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Соответствие критериям:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   <a class="inline-link js-toggle" href="#popup-crt-basic" id="crt-basic-link">Посмотреть</a>
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Исходные тексты:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   <a class="inline-link" href="https://github.com/brotherilia/technomart">source</a>, <a class="inline-link" href="https://github.com/brotherilia/technomart/tree/gh-pages">build</a>
                 </td>
               </tr>
             </table>
-            <div class="section section--common js-popup" id="popup-crt-basic">
+            <div class="info info--common js-popup" id="popup-crt-basic">
               <ul class="icon-list icon-list--close-btn">
                 <li class="icon-list__item">
                   <button class="icon-list__link js-close">
@@ -298,165 +298,165 @@
                   </button>
                 </li>
               </ul>
-              <h2 class="section__title">
+              <h2 class="info__title">
                 Базовые критерии
               </h2>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Разметка
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Б1. Выполнена HTML-разметка всех страниц и всех элементов на страницах.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б2. К страницам подключён один стилевой файл (с учётом normalize.css или reset.css к каждой странице могут быть подключены два файла).
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б3. Стилевой файл подключён внутри &lt;head&gt;.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б4. Грубые ошибки в разметке отсутствуют. Например: ссылки сделаны не тегом &lt;a&gt;, а другими тегами; использование строчных элементов для создания крупных (сеточных) блоков; абзацы сделаны не тегами &lt;p&gt;, а &lt;br&gt; &lt;br&gt;.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б5. Документ проходит проверку на валидность http://validator.w3.org/nu/.
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Стилизация
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Б6. Вся собственная стилизация выполнена в одном стилевом файле.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б7. Раскладка блоков на странице сделана не с помощью таблиц или позиционирования.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б8. В CSS отсутствует !important. Допускается использование !important при обосновании его необходимости в комментарии.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б9. Подключены правильные шрифты, их размеры и толщина соответствуют размерам в макетах и ТЗ.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б10. Указаны альтернативные варианты шрифта и тип семейства в конце перечисления font-family.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б11. При наполнении контентом (как в макете) элементы каждой страницы соответствуют макету, но допускаются: различия в 5 пикселей по высоте (при расстояниях более 30 пикселей) и 2 пикселя по ширине; отсутствие стилизации кастомных элементов форм; различия в отображении шрифтов, связанные со сглаживанием на различных платформах.
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Тестирование
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Б12. Вёрстка идентично отображается в последних версиях браузеров Chrome, Opera, Firefox, Safari, а также в Internet Explorer 10+.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б13. Сайт нормально смотрится на минимальном для макета разрешении. padding по краям контейнера указывается для того, чтобы контент не прижимался к краям экрана на минимальном разрешении. При большем размере экрана макет должен оставаться по центру и не иметь горизонтального скролла. На разрешениях экрана меньше ширины контейнера вёрстка не должна менять свою структуру.
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Разное
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Б14. В корне документа имеются папки css, img, js или аналогичные. Главная страница имеет название index.html. В названиях и расширениях файлов нет заглавных букв и пробелов, использованы только латинские символы.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б15. Единообразное написание и форматирование кода в HTML, CSS и JavaScript.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б16. Выбран подходящий формат изображений. Например: JPEG для фотографий; PNG или SVG для всех прочих.
                 </li>
               </ul>
-              <h2 class="section__title">
+              <h2 class="info__title">
                 Дополнительные критерии
               </h2>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Разметка
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Д1. У всех изображений в теге &lt;img&gt; прописан размер.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д2. Использовано минимально возможное количество HTML-элементов (нет лишних элементов).
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д3. Все скрипты подключены непосредственно перед &lt;/body&gt;.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д4. Названия полей форм привязаны к своим полям с помощью &lt;label&gt;.
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Стилизация
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Д5. Использованы normalize.css или reset.css (но не оба сразу).
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д6. Для стилизации не использованы #id.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д7. Нет вложенности селекторов больше двух.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д8. Явно указано подходящее vertical-align для потоковых блоков с display: inline-block.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д9. Для CSS-свойств с префиксом указан его вариант без префикса и это указание идёт последним.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д10. Для блока у которого есть фоновое изображение прописан фоновый цвет, который соответствует преобладающему цвету изображения (пока изображение не загружено, страница выглядит похоже на макет).
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д11. Все состояния элементов (смотрите styleguide.psd) прописаны в стилевом файле.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д12. Файл стилей представлен в двух вариантах: с форматированием и минимизированный, к странице подключён минимизированный.
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 JavaScript
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Д13. JavaScript-файл представлен в двух вариантах: с форматированием и минимизированный, к странице подключён минимизированный.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д14. С помощью JavaScript реализовано открытие/закрытие окна с формой (без вспомогательных библиотек).
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д15. С помощью JavaScript добавлена анимация формы (без вспомогательных библиотек).
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д16. Добавлена интерактивная карта (допускается подключение с помощью iframe).
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Тестирование
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Д17. Вёрстка проходит тест на переполнение контентом: не ломается при добавлении в элементы большего количества текста; не ломается при использовании картинок с неподходящими размерами; не ломается при изменении количества потоковых блоков. Текст не выпадает из блоков, нижерасположенные блоки не скрываются, смещение блоков в потоке сохраняет логику потока (не приводит к нарушению сетки).
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д18. Критический функционал сайта работоспособен без JavaScript (использовано прогрессивное улучшение). Например: все формы являются работоспособными без JavaScript; элементы, вызывающие появление попапов, являются ссылками, ведущими на отдельные страницы; интерактивная карта без JavaScript показывает статичную картинку с картой.
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Разное
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Д19. Отсутствует транслит в названиях классов, атрибутах и так далее.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д20. При взаимодействии с элементами (наведение, нажатие) ни сам элемент, ни окружающие его блоки не меняют своего положения (если иное не прописано в ТЗ или slyleguide.psd).
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д21. Проведена базовая оптимизация: минифицированы стили и скрипты, использован спрайт или иконочный шрифт (можно оба).
                 </li>
               </ul>
@@ -476,73 +476,73 @@
             <p>
               Личный итоговый проект при прохождении интенсивного курса <a class="inline-link" href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a> в <a class="inline-link" href="https://htmlacademy.ru">HTML Academy</a>. Рабочие страницы: "Главная", "Фото и видео", "Форма отзыва". Адаптивная "резиновая" верстка для 3-х вьюпортов, адаптивная графика. Интерактивная карта.
             </p>
-            <table class="common-table">
+            <table class="article__table">
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Степень реализации:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   верстка
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Адаптивность:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   mobile, tablet, desktop
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Сетка:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   responsive
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Методология:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   БЭМ (именование классов)
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   CSS препроцессор:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   LESS
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Автоматизация:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   Grunt
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Соответствие критериям:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   <a class="inline-link js-toggle" href="#popup-crt-advanced" id="crt-advanced-link">Посмотреть</a>
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Исходные тексты:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   <a class="inline-link" href="https://github.com/brotherilia/sedona">source</a>, <a class="inline-link" href="https://github.com/brotherilia/sedona/tree/gh-pages">build</a>
                 </td>
               </tr>
             </table>
-            <div class="section section--common js-popup" id="popup-crt-advanced">
+            <div class="info info--common js-popup" id="popup-crt-advanced">
               <ul class="icon-list icon-list--close-btn">
                 <li class="icon-list__item">
                   <button class="icon-list__link js-close">
@@ -552,204 +552,204 @@
                   </button>
                 </li>
               </ul>
-              <h2 class="section__title">
+              <h2 class="info__title">
                 Базовые критерии
               </h2>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Разметка
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Б1. Выполнена HTML-разметка всех страниц проекта и всех элементов на этих страницах.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б2. Грубые ошибки в разметке отсутствуют.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б3. Документ проходит проверку на валидность http://validator.w3.org/nu/.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б4. В разметке отсутствует дублирование кода для одного и того же элемента, с помощью которых элемент отображается в разных местах страницы на разных версиях: мобильной, десктопной, планшетной. Этот критерий не касается элементов, которые скрываются или показываются в разных версиях.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б5. Отсутствуют типовые ошибки в разметке по методологии БЭМ.
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Стилизация
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Б6. Раскладка блоков на странице сделана не с помощью таблиц или позиционирования.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б7. В CSS отсутствует !important.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б8. Подключены правильные шрифты, их размеры, цвета и жирность соответствуют размерам, цветам и жирности в макетах и техническом задании.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б9. Нестандартные шрифты подключены локально. Формат шрифтов должен быть woff и woff2.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б10. Указаны альтернативные варианты шрифта и тип семейства в конце перечисления font-family.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б11. При наполнении контентом (как в макете) элементы каждой версии страницы (мобильной, планшетной и десктопной) соответствуют макету.
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 CSS-препроцессор
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Б12. Использован CSS-препроцессор.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б13. Код стилей должен быть разбит на несколько частей.
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Адаптивность
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Б14. Выполнена вёрстка трёх состояний каждой страницы: мобильной, планшетной и десктопной.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б15. Адаптивность должна работать на планшетах и мобильных устройствах.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б16. Использованы флексбоксы.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б17. Выполнена ретинизация растровой графики.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б18. Использована векторная графика.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б19. Логотип должен адаптироваться.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б20. Выполнено кадрирование контентных изображений.
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Оптимизация
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Б21. «Нежная» ретинизация.
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Сборка проекта
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Б22. Процесс сборки личного проекта должен быть настроен с помощью инструментов Грант или Галп.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б23. Все зависимости проекта должны быть указаны в файле package.json. Команда npm i должна установить всё необходимое для того, чтобы сборка проекта работала.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б24. Сборка проекта должна запускаться командой npm run build.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б25. В результате сборки должна получаться папка build со всеми необходимыми файлами.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б26. Папка build со всем её содержимым не должна попадать в Гитхаб.
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Разное
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Б27. Вёрстка идентично отображается в последних версиях браузеров Chrome, Opera, Firefox, Safari, Edge, а также в Internet Explorer 11.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б28. Единообразное написание и форматирование кода в HTML, файлах CSS-препроцессора и JavaScript (включая файлы автоматизации).
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б29. Отсутствует транслит в названиях классов, атрибутах, переменных CSS-препроцессора, названиях примесей и так далее.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Б30. Мобильное меню должно быть работоспособным на мобильной версии при отключенном JavaScript.
                 </li>
               </ul>
-              <h2 class="section__title">
+              <h2 class="info__title">
                 Дополнительные критерии
               </h2>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Разметка
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Д1. У всех векторных изображений размер прописан в теге &lt;img&gt;, у встроенных SVG-изображений размер прописан в теге &lt;svg&gt;.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д2. Использовано минимально возможное количество HTML-элементов (нет лишних элементов).
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д3. Названия полей форм привязаны к своим полям с помощью &lt;label&gt;.
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Стилизация
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Д4. Для стилизации не использованы #id.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д5. Явно указано подходящее vertical-align для потоковых блоков с display: inline-block.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д6. Для блока, у которого есть фоновое изображение, прописан фоновый цвет, который соответствует преобладающему цвету изображения (пока изображение не загружено, страница выглядит похоже на макет).
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д7. Все состояния элементов (смотрите styleguide.psd) прописаны в стилевом файле.
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 CSS-препроцессор
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Д8. Цветовые функции могут использоваться только для изменения альфа-канала цвета.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д9. Примеси не используются для генерации правил с вендорными префиксами.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д10. Нет вложенности больше двух уровней.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д11. Верное использование &amp; в стилевых файлах.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д12. Не используются расширения (extend).
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Тестирование
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Д13. Вёрстка проходит тест на переполнение контентом.
                 </li>
-                <li class="section__item">
+                <li class="info__item">
                   Д14. Критическая функциональность сайта работоспособна без JavaScript (использовано прогрессивное улучшение).
                 </li>
               </ul>
-              <h3 class="section__subtitle">
+              <h3 class="info__subtitle">
                 Разное
               </h3>
-              <ul class="section__items">
-                <li class="section__item">
+              <ul class="info__items">
+                <li class="info__item">
                   Д15. При взаимодействии с элементами (наведение, нажатие) ни сам элемент, ни окружающие его блоки не меняют своего положения (если иное не прописано в техническом задании или slyleguide.psd).
                 </li>
               </ul>
@@ -769,36 +769,36 @@
             <p>
               Сайт, посвященный мотоциклу Honda Steed. Создан для сбора и систематизации информации о данном мотоцикле. Позже функционал был расширен форумом.
             </p>
-            <table class="common-table">
+            <table class="article__table">
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Степень реализации:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   полная
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Адаптивность:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   desktop
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Сетка:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   fixed
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Методология:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   Именование классов приближено к БЭМ
                 </td>
               </tr>
@@ -818,36 +818,36 @@
             <p>
               Сайт, посвященный моим путешествиям. Создан для хранения информации о поездках и организации фотоальбомов. Дизайн был изначально разработан для музыкального проекта.
             </p>
-            <table class="common-table">
+            <table class="article__table">
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Степень реализации:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   полная
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Адаптивность:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   desktop
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Сетка:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   fixed
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Методология:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   Именование классов приближено к БЭМ
                 </td>
               </tr>
@@ -867,60 +867,60 @@
             <p>
               Сайт музыкального проекта, который не состоялся. Одна страница. Адаптивная "резиновая" верстка для 3-х вьюпортов, адаптивная графика.
             </p>
-            <table class="common-table">
+            <table class="article__table">
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Степень реализации:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   полная
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Адаптивность:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   mobile, tablet, desktop
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Сетка:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   responsive
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Методология:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   БЭМ (именование классов)
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   CSS препроцессор:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   LESS
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Автоматизация:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   Grunt
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Исходные тексты:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   <a class="inline-link" href="https://github.com/brotherilia/sumerkyng">source</a>, <a class="inline-link" href="https://github.com/brotherilia/sumerkyng/tree/gh-pages">build</a>
                 </td>
               </tr>
@@ -940,53 +940,61 @@
             <p>
               Сайт-визитка гипотетической веб-студии. Изначально разработан как оболочка для моего портфолио. Позже дизайн был использован для моей <a class="inline-link" href="#menshikov">домашней страницы</a>. Cтраница "Contact" оставлена в первоначальном флэш-варианте.
             </p>
-            <table class="common-table">
+            <table class="article__table">
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Степень реализации:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   полная
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Адаптивность:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   desktop
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Сетка:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   fixed
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Методология:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   БЭМ (именование классов)
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   CSS препроцессор:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   LESS
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Автоматизация:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   Grunt
+                </td>
+              </tr>
+              <tr>
+                <td class="article__td">
+                  Исходные тексты:
+                </td>
+                <td class="article__td">
+                  <a class="inline-link" href="https://github.com/brotherilia/qsign">source</a>, <a class="inline-link" href="https://github.com/brotherilia/qsign/tree/gh-pages">build</a>
                 </td>
               </tr>
             </table>
@@ -1006,52 +1014,52 @@
             <p>
               Учебная верстка из рассылки <a class="inline-link" href="https://htmlacademy.ru">HTML Academy</a>. Одна страница. Адаптивная "резиновая" верстка для 2-х вьюпортов, адаптивная графика.
             </p>
-            <table class="common-table">
+            <table class="article__table">
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Степень реализации:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   верстка
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Адаптивность:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   mobile, desktop
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Сетка:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   responsive
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Методология:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   БЭМ (именование классов)
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   CSS препроцессор:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   LESS
                 </td>
               </tr>
               <tr>
-                <td class="common-table__td">
+                <td class="article__td">
                   Автоматизация:
                 </td>
-                <td class="common-table__td">
+                <td class="article__td">
                   Grunt
                 </td>
               </tr>
@@ -1065,29 +1073,29 @@
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <aside class="page-aside-right">
-        <section class="section section--news js-popup" id="popup-news">
-          <h2 class="section__title">
+        <section class="info info--news js-popup" id="popup-news">
+          <h2 class="info__title">
             Новости
           </h2>
-          <ul class="section__items">
-            <li class="section__item">
-              <time class="section__item-date" datetime="2016-07-25">
+          <ul class="info__items">
+            <li class="info__item">
+              <time class="info__item-date" datetime="2016-07-25">
                 25.07.2016
               </time>
               <p>
                 Переверстан проект <a class="inline-link" href="projects.html#qsign">Q.Sign Studio</a> (БЭМ, препроцессор, автоматизация).
               </p>
             </li>
-            <li class="section__item">
-              <time class="section__item-date" datetime="2016-07-24">
+            <li class="info__item">
+              <time class="info__item-date" datetime="2016-07-24">
                 24.07.2016
               </time>
               <p>
                 Сверстана адаптивная версия проекта <a class="inline-link" href="projects.html#sumerkyng">Sumerkyng</a>.
               </p>
             </li>
-            <li class="section__item">
-              <time class="section__item-date" datetime="2016-07-23">
+            <li class="info__item">
+              <time class="info__item-date" datetime="2016-07-23">
                 23.07.2016
               </time>
               <p>
@@ -1097,32 +1105,32 @@
                 Добавлен проект <a class="inline-link" href="projects.html#sedona">Sedona</a>.
               </p>
             </li>
-            <li class="section__item">
-              <time class="section__item-date" datetime="2016-01-28">
+            <li class="info__item">
+              <time class="info__item-date" datetime="2016-01-28">
                 28.01.2016
               </time>
               <p>
                 Проект <a class="inline-link" href="projects.html#steed">Honda Steed</a> полностью переверстан.
               </p>
             </li>
-            <li class="section__item">
-              <time class="section__item-date" datetime="2016-01-12">
+            <li class="info__item">
+              <time class="info__item-date" datetime="2016-01-12">
                 12.01.2016
               </time>
               <p>
                 Проект <a class="inline-link" href="projects.html#astowell">Astowell</a> полностью переверстан.
               </p>
             </li>
-            <li class="section__item">
-              <time class="section__item-date" datetime="2015-12-22">
+            <li class="info__item">
+              <time class="info__item-date" datetime="2015-12-22">
                 22.12.2015
               </time>
               <p>
                 Добавлен проект <a class="inline-link" href="projects.html#brandly">Brandly</a>.
               </p>
             </li>
-            <li class="section__item">
-              <time class="section__item-date" datetime="2015-12-15">
+            <li class="info__item">
+              <time class="info__item-date" datetime="2015-12-15">
                 15.12.2015
               </time>
               <p>
@@ -1138,7 +1146,7 @@
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <footer class="page-footer">
-        <section class="section section--contacts js-popup" id="popup-contacts">
+        <nav class="contacts-nav js-popup" id="popup-contacts">
           <ul class="icon-list">
             <li class="icon-list__item">
               <a class="icon-list__link" href="mailto:ilyamenshikov@gmail.com">
@@ -1169,38 +1177,38 @@
               </a>
             </li>
           </ul>
-        </section>
+        </nav>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!--                                                              -->
+        <!--                      MOBILE NAV BOTTOM                       -->
+        <!--                                                              -->
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <nav class="mobile-nav  mobile-nav--bottom">
+          <ul class="icon-list">
+            <li class="icon-list__item">
+              <a class="icon-list__link" href="index.html">
+                <i class="css-icon css-icon--home">
+                  <div class="css-icon__body"></div>
+                </i>
+              </a>
+            </li>
+            <li class="icon-list__item">
+              <a class="icon-list__link" id="to-top" href="#top">
+                <i class="css-icon css-icon--up-arrow">
+                  <div class="css-icon__body"></div>
+                </i>
+              </a>
+            </li>
+            <li class="icon-list__item icon-list__item--contacts">
+              <button class="icon-list__link js-toggle" id="css-icon--info" href="#popup-contacts">
+                <i class="css-icon css-icon--info">
+                  <div class="css-icon__body"></div>
+                </i>
+              </button>
+            </li>
+          </ul>
+        </nav>
       </footer>
-      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <!--                                                              -->
-      <!--                      MOBILE NAV BOTTOM                       -->
-      <!--                                                              -->
-      <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-      <nav class="mobile-nav">
-        <ul class="icon-list">
-          <li class="icon-list__item">
-            <a class="icon-list__link" href="index.html">
-              <i class="css-icon css-icon--home">
-                <div class="css-icon__body"></div>
-              </i>
-            </a>
-          </li>
-          <li class="icon-list__item">
-            <a class="icon-list__link" id="to-top" href="#top">
-              <i class="css-icon css-icon--up-arrow">
-                <div class="css-icon__body"></div>
-              </i>
-            </a>
-          </li>
-          <li class="icon-list__item">
-            <button class="icon-list__link js-toggle" id="css-icon--info" href="#popup-contacts">
-              <i class="css-icon css-icon--info">
-                <div class="css-icon__body"></div>
-              </i>
-            </button>
-          </li>
-        </ul>
-      </nav>
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/script.min.js"></script>
