@@ -1,11 +1,21 @@
 .page-footer {
   position: relative;
-  height: 100px;
-  background: linear-gradient(to top, @bg-color 0%, @bg-alt1-color 100%);
+  height: 164px;
+  background: linear-gradient(to top, @bg-color 64px, @bg-alt1-color 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @media @tablet-widths {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 40px;
+  }
 
   &::after {
     .slogan();
-    bottom: 50px;
+    bottom: 114px;
   }
 
 }

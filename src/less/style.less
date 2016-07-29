@@ -1,3 +1,33 @@
+.alarm {
+  display: none;
+
+  @media @desktop-widths {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 210px;
+    left: -220px;
+    transform: rotate(-90deg);
+    color: #ff0000;
+    font-size: 10px;
+  }
+}
+
+.alarm2 {
+  display: none;
+
+  @media @desktop-widths {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 210px;
+    right: -220px;
+    transform: rotate(90deg);
+    color: #ff0000;
+    font-size: 10px;
+  }
+}
+
 @import "variab";
 @import "mixins";
 @import "global";
@@ -10,15 +40,16 @@
 @import "layout/page-footer";
 
 @import "blocks/inline-link";
-@import "blocks/mobile-nav";
 @import "blocks/css-icon";
-@import "blocks/logo";
+@import "blocks/mobile-nav";
 @import "blocks/main-nav";
 @import "blocks/projects-nav";
-@import "blocks/article";
-@import "blocks/section";
+@import "blocks/contacts-nav";
 @import "blocks/menu-list";
 @import "blocks/icon-list";
+@import "blocks/logo";
+@import "blocks/article";
+@import "blocks/info";
 @import "blocks/common-table";
 
 /* @import "debug"; */

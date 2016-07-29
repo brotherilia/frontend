@@ -5,6 +5,10 @@
   justify-content: space-around;
   align-items: center;
 
+  @media @tablet-widths {
+    justify-content: space-between;
+  }
+
   &--close-btn {
     position: absolute;
     right: 20px;
@@ -13,6 +17,15 @@
 
   &__item {
 
+  }
+
+  &__item--home,
+  &__item--menu,
+  &__item--contacts {
+
+    @media @tablet-widths {
+      display: none;
+    }
   }
 
   &__link {

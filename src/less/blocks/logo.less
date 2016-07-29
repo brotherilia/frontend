@@ -1,4 +1,18 @@
 .logo {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  background: url("../img/bg-logo.png") no-repeat scroll 5px 15px, linear-gradient(@bg-color 0%, @bg-alt1-color 100%);
+
+  &::after {
+    .slogan();
+    top: 5px;
+  }
+
+  @media @tablet-widths {
+    order: 3;
+  }
+
   &__ilya {
     position: relative;
     height: 95px;
