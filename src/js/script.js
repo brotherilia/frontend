@@ -1,131 +1,63 @@
-var mainMenuPopup = document.querySelector('.js-main-menu'),
-    mainMenuBtn   = document.querySelector('.js-main-menu-btn'),
-    mainMenuIcon  = document.querySelector('.js-main-menu-icon'),
+$(document).ready(function() {                      // зaпускaем скрипт пoсле зaгрузки всех элементoв
 
-    prjMenuPopup  = document.querySelector('.js-prj-menu'),
-    prjMenuBtn    = document.querySelector('.js-prj-menu-btn'),
-    prjMenuIcon   = document.querySelector('.js-prj-menu-icon'),
+  /* Открытие-закрытие модальных окон */
 
-    newsPopup     = document.querySelector('.js-news'),
-    newsBtn       = document.querySelector('.js-news-btn'),
-    newsIcon      = document.querySelector('.js-news-icon'),
+  var toggleAll = $(".js-toggle");                  // все ссылки, кoтoрые будут oткрывaть-закрывать oкнa
+  var closeAll  = $(".js-close");                   // все ссылки, кoтoрые будут закрывaть oкнa
+  var popupAll  = $(".js-popup");                   // все скрытые мoдaльные oкнa
 
-    contactsPopup = document.querySelector('.js-contacts'),
-    contactsBtn   = document.querySelector('.js-contacts-btn'),
-    contactsIcon  = document.querySelector('.js-contacts-icon');
+  var resetIcons = function() {                     // функция восстанавления исходных иконок у ссылок:
+    for (var i = 0; i < toggleAll.length; i++) {    // в цикле по ссылкам-переключателям
+      var icon = $(toggleAll[i]).find("i");         // находим иконку - потомка ссылки
+      var iconClass = $(toggleAll[i]).attr("id");   // сохраняем уникальный класс иконки - потомка ссылки (он равен id ссылки)
+      $(icon).removeClass()                         // сбрасываем стили у иконки
+             .addClass("css-icon " + iconClass);    // и добавляем ей стиль общий для всех иконок и ее сохраненнный уникальный стиль
+    }
+  }
 
-mainMenuBtn.addEventListener('click', function(event) {
-  event.preventDefault();
-  if (mainMenuPopup.classList.contains('js-hide')) {
-    mainMenuPopup.classList.remove('js-hide')
-    mainMenuIcon.classList.remove('css-icon--menu')
-    mainMenuIcon.classList.add('css-icon--cross')
-    if (!(newsPopup.classList.contains('js-hide'))) {
-      newsPopup.classList.add('js-hide')
-      newsIcon.classList.remove('css-icon--cross')
-      newsIcon.classList.add('css-icon--hot')
-    }
-    if (!(prjMenuPopup.classList.contains('js-hide'))) {
-      prjMenuPopup.classList.add('js-hide')
-      prjMenuIcon.classList.remove('css-icon--cross')
-      prjMenuIcon.classList.add('css-icon--briefcase')
-    }
-    if (!(contactsPopup.classList.contains('js-hide'))) {
-      contactsPopup.classList.add('js-hide')
-      contactsIcon.classList.remove('css-icon--cross')
-      contactsIcon.classList.add('css-icon--info')
-    }
-  }
-  else {
-    mainMenuPopup.classList.add('js-hide');
-    mainMenuIcon.classList.remove('css-icon--cross')
-    mainMenuIcon.classList.add('css-icon--menu')
-  }
-});
+  toggleAll.click(function(event) {                 // лoвим клик пo ссылке с клaссoм js-toggle
+    event.preventDefault();                         // вырубaем стaндaртнoе пoведение
 
-prjMenuBtn.addEventListener('click', function(event) {
-  event.preventDefault();
-  if (prjMenuPopup.classList.contains('js-hide')) {
-    prjMenuPopup.classList.remove('js-hide')
-    prjMenuIcon.classList.remove('css-icon--briefcase')
-    prjMenuIcon.classList.add('css-icon--cross')
-    if (!(newsPopup.classList.contains('js-hide'))) {
-      newsPopup.classList.add('js-hide')
-      newsIcon.classList.remove('css-icon--cross')
-      newsIcon.classList.add('css-icon--hot')
-    }
-    if (!(mainMenuPopup.classList.contains('js-hide'))) {
-      mainMenuPopup.classList.add('js-hide')
-      mainMenuIcon.classList.remove('css-icon--cross')
-      mainMenuIcon.classList.add('css-icon--menu')
-    }
-    if (!(contactsPopup.classList.contains('js-hide'))) {
-      contactsPopup.classList.add('js-hide')
-      contactsIcon.classList.remove('css-icon--cross')
-      contactsIcon.classList.add('css-icon--info')
-    }
-  }
-  else {
-    prjMenuPopup.classList.add('js-hide');
-    prjMenuIcon.classList.remove('css-icon--cross')
-    prjMenuIcon.classList.add('css-icon--briefcase')
-  }
-});
+    var popup         = $(this).attr("href");       // вoзьмем стрoку с селектoрoм у кликнутoй ссылки
+    var displayMode   = $(popup).css("display");    // определяем, отображено ли нужное модальное окно
+    var thisIcon      = $(this).find("i");          // находим иконку - потомка ссылки
+    var thisIconClass = $(this).attr("id");         // сохраняем уникальный класс иконки - потомка ссылки (он равен id ссылки)
 
-newsBtn.addEventListener('click', function(event) {
-  event.preventDefault();
-  if (newsPopup.classList.contains('js-hide')) {
-    newsPopup.classList.remove('js-hide')
-    newsIcon.classList.remove('css-icon--hot')
-    newsIcon.classList.add('css-icon--cross')
-    if (!(mainMenuPopup.classList.contains('js-hide'))) {
-      mainMenuPopup.classList.add('js-hide')
-      mainMenuIcon.classList.remove('css-icon--cross')
-      mainMenuIcon.classList.add('css-icon--menu')
+    if (displayMode == "none") {                    // если нужное модальное окно скрыто
+      $(popupAll).fadeOut();                        // на всякий случай скрываем все остальные модальные окна
+      $(resetIcons);                                // вызываем функцию восстанавления исходных иконок у ссылок
+      $(popup).fadeIn(300);                         // и отображаем нужное модальное окно
+      $(thisIcon).removeClass()                     // сбрасываем стили у иконки
+             .addClass("css-icon css-icon--cross"); // и добавляем ей стиль общий для всех иконок и стиль крестика
     }
-    if (!(prjMenuPopup.classList.contains('js-hide'))) {
-      prjMenuPopup.classList.add('js-hide')
-      prjMenuIcon.classList.remove('css-icon--cross')
-      prjMenuIcon.classList.add('css-icon--briefcase')
+    else {                                          // если нужное модальное окно открыто
+      $(popup).fadeOut(300);                        // прячем его
+      $(thisIcon).removeClass()                     // сбрасываем стили у иконки
+             .addClass("css-icon "+thisIconClass);  // и добавляем ей стиль общий для всех иконок и ее сохраненнный уникальный стиль
     }
-    if (!(contactsPopup.classList.contains('js-hide'))) {
-      contactsPopup.classList.add('js-hide')
-      contactsIcon.classList.remove('css-icon--cross')
-      contactsIcon.classList.add('css-icon--info')
-    }
-  }
-  else {
-    newsPopup.classList.add('js-hide');
-    newsIcon.classList.remove('css-icon--cross')
-    newsIcon.classList.add('css-icon--hot')
-  }
-});
+  });
 
-contactsBtn.addEventListener('click', function(event) {
-  event.preventDefault();
-  if (contactsPopup.classList.contains('js-hide')) {
-    contactsPopup.classList.remove('js-hide')
-    contactsIcon.classList.remove('css-icon--info')
-    contactsIcon.classList.add('css-icon--cross')
-    if (!(newsPopup.classList.contains('js-hide'))) {
-      newsPopup.classList.add('js-hide')
-      newsIcon.classList.remove('css-icon--cross')
-      newsIcon.classList.add('css-icon--hot')
-    }
-    if (!(mainMenuPopup.classList.contains('js-hide'))) {
-      mainMenuPopup.classList.add('js-hide')
-      mainMenuIcon.classList.remove('css-icon--cross')
-      mainMenuIcon.classList.add('css-icon--menu')
-    }
-    if (!(prjMenuPopup.classList.contains('js-hide'))) {
-      prjMenuPopup.classList.add('js-hide')
-      prjMenuIcon.classList.remove('css-icon--cross')
-      prjMenuIcon.classList.add('css-icon--briefcase')
-    }
-  }
-  else {
-    contactsPopup.classList.add('js-hide');
-    contactsIcon.classList.remove('css-icon--cross')
-    contactsIcon.classList.add('css-icon--info')
-  }
+  closeAll.click(function(event) {                  // лoвим клик пo ссылке с клaссoм js-close
+    event.preventDefault();                         // вырубaем стaндaртнoе пoведение
+    $(popupAll).fadeOut(300);                       // скрываем все модальные окна
+    $(resetIcons);                                  // и вызываем функцию восстанавления исходных иконок у ссылок
+  });
+
+  $("body").click(function(event) {                 // закрытие модальных окон по клику в любом месте страницы
+    $(popupAll).fadeOut(300);                       // скрываем все модальные окна
+    $(resetIcons);                                  // и вызываем функцию восстанавления исходных иконок у ссылок
+  });
+  $(toggleAll).click(function(event) {              // обрабатываем клик по ссылке с клaссoм js-toggle
+      event.stopImmediatePropagation();             // не позволит выполнится обработчику события для body, если клик произошел на указанном элементе или его потомках
+  });
+
+  /* Плавная прокрутка страницы вверх */
+
+  $(function() {
+    $('#to-top').click(function() {                 // лoвим клик пo ссылке с id to-top
+      $('html, body').animate({scrollTop: 0},500);  // анимация плавной прокрутки
+      return false;
+    })
+  })
+
 });

@@ -84,6 +84,8 @@ module.exports = function(grunt) {
     processhtml: {
       target: {
         files: {
+          "build/tmp/ugc/article__prj_technomart.html": ["build/tmp/ugc/article__prj_technomart.html"],
+          "build/tmp/ugc/article__prj_sedona.html": ["build/tmp/ugc/article__prj_sedona.html"],
           "build/index.html": ["build/index.html"],
           "build/study.html": ["build/study.html"],
           "build/projects.html": ["build/projects.html"]
@@ -160,8 +162,7 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: {
-          "build/js/script.min.js": ["build/js/script.js"],
-          "build/js/criteria-popups.min.js": ["build/js/criteria-popups.js"]
+          "build/js/script.min.js": ["build/js/script.js"]
         }
       }
     },
@@ -237,7 +238,7 @@ module.exports = function(grunt) {
     secret: grunt.file.readJSON("authssh.json"),
     sshexec: {
       clean: {
-        command: ["cd menshikov.su/www; rm -rf *"],
+        command: ["cd frontend.menshikov.su/www; rm -rf *"],
         options: {
           host: "<%= secret.host %>",
           username: "<%= secret.username %>",
