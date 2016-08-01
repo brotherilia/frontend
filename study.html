@@ -26,6 +26,8 @@
         <!--                      MOBILE NAV TOP                          -->
         <!--                                                              -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="alarm">Вы просматриваете планшетную версию сайта. Версия для десктопа - в разработке.</div>
+        <div class="alarm2">Вы просматриваете планшетную версию сайта. Версия для десктопа - в разработке.</div>
         <nav class="mobile-nav mobile-nav--top">
           <ul class="icon-list">
             <li class="icon-list__item icon-list__item--home">
@@ -140,7 +142,7 @@
           <h2 class="article__title">
             HTML Academy
           </h2>
-          <div class="article__text">
+          <div class="article__content">
             <p>
               Старт моей нынешней активности был положен, когда мне посоветовали ознакомиться с методами обучения <a class="inline-link" href="https://htmlacademy.ru">HTML Academy</a>.
             </p>
@@ -150,11 +152,13 @@
             <p>
               После этого я записался на интенсивный курс <a class="inline-link" href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a> и успешно прошел его. А через некоторое время прошел обучение на интенсивном курсе <a class="inline-link" href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>. Я не буду здесь подробно описывать все что касается процесса обучения в HTML Academy - это можно узнать на их <a class="inline-link" href="https://htmlacademy.ru">сайте</a>. Скажу одно: я не жалею потраченного времени и денег и смело могу рекомендовать их для обучения как абсолютным новичкам, так и уже имеющим некоторый опыт.
             </p>
-            <div class="article__img">
-              <img src="tmp/ugc/img/cert-basic.jpg" width="230" height="325" alt="Базовый HTML и CSS">
-            </div>
-            <div class="article__img">
-              <img src="tmp/ugc/img/cert-advanced.jpg" width="230" height="325" alt="Продвинутый HTML и CSS">
+            <div class="article__addons article__addons--two-img">
+              <div class="article__img">
+                <img src="tmp/ugc/img/cert-basic.jpg" width="230" height="325" alt="Базовый HTML и CSS">
+              </div>
+              <div class="article__img">
+                <img src="tmp/ugc/img/cert-advanced.jpg" width="230" height="325" alt="Продвинутый HTML и CSS">
+              </div>
             </div>
           </div>
         </article>
@@ -162,81 +166,85 @@
           <h2 class="article__title" id="technomart">
             Техномарт
           </h2>
-          <div class="article__text">
-            <div class="article__img">
-              <a class="article__img-link" href="http://brotherilia.github.io/technomart/">
-                <img src="tmp/ugc/img/technomart.jpg" width="230" height="230" alt="Техномарт">
-              </a>
-            </div>
+          <div class="article__content">
             <p>
               Личный итоговый проект при прохождении интенсивного курса <a class="inline-link" href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a> в <a class="inline-link" href="https://htmlacademy.ru">HTML Academy</a>. Рабочие страницы: "Главная", "Каталог". На страницах реализован функционал модулей: слайдер, табы, форма обратной связи, отправка в корзину, интерактивная карта.
             </p>
-            <table class="article__table">
-              <tr>
-                <td class="article__td">
-                  Степень реализации:
-                </td>
-                <td class="article__td">
-                  верстка
-                </td>
-              </tr>
-              <tr>
-                <td class="article__td">
-                  Адаптивность:
-                </td>
-                <td class="article__td">
-                  desktop
-                </td>
-              </tr>
-              <tr>
-                <td class="article__td">
-                  Сетка:
-                </td>
-                <td class="article__td">
-                  fixed
-                </td>
-              </tr>
-              <tr>
-                <td class="article__td">
-                  Методология:
-                </td>
-                <td class="article__td">
-                  БЭМ (именование классов)
-                </td>
-              </tr>
-              <tr>
-                <td class="article__td">
-                  CSS препроцессор:
-                </td>
-                <td class="article__td">
-                  LESS
-                </td>
-              </tr>
-              <tr>
-                <td class="article__td">
-                  Автоматизация:
-                </td>
-                <td class="article__td">
-                  Grunt
-                </td>
-              </tr>
-              <tr>
-                <td class="article__td">
-                  Соответствие критериям:
-                </td>
-                <td class="article__td">
-                  <a class="inline-link js-toggle" href="#popup-crt-basic" id="crt-basic-link">Посмотреть</a>
-                </td>
-              </tr>
-              <tr>
-                <td class="article__td">
-                  Исходные тексты:
-                </td>
-                <td class="article__td">
-                  <a class="inline-link" href="https://github.com/brotherilia/technomart">source</a>, <a class="inline-link" href="https://github.com/brotherilia/technomart/tree/gh-pages">build</a>
-                </td>
-              </tr>
-            </table>
+            <div class="article__addons">
+              <div class="article__img">
+                <a class="article__img-link" href="http://brotherilia.github.io/technomart/">
+                  <img src="tmp/ugc/img/technomart.jpg" width="230" height="230" alt="Техномарт">
+                </a>
+              </div>
+              <div class="article__table">
+                <table class="common-table">
+                  <tr>
+                    <td class="common-table__td">
+                      Степень реализации:
+                    </td>
+                    <td class="common-table__td">
+                      верстка
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="common-table__td">
+                      Адаптивность:
+                    </td>
+                    <td class="common-table__td">
+                      desktop
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="common-table__td">
+                      Сетка:
+                    </td>
+                    <td class="common-table__td">
+                      fixed
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="common-table__td">
+                      Методология:
+                    </td>
+                    <td class="common-table__td">
+                      БЭМ (именование классов)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="common-table__td">
+                      CSS препроцессор:
+                    </td>
+                    <td class="common-table__td">
+                      LESS
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="common-table__td">
+                      Автоматизация:
+                    </td>
+                    <td class="common-table__td">
+                      Grunt
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="common-table__td">
+                      Соответствие критериям:
+                    </td>
+                    <td class="common-table__td">
+                      <a class="inline-link js-toggle" href="#popup-crt-basic" id="crt-basic-link">Посмотреть</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="common-table__td">
+                      Исходные тексты:
+                    </td>
+                    <td class="common-table__td">
+                      <a class="inline-link" href="https://github.com/brotherilia/technomart">source</a>, <a class="inline-link" href="https://github.com/brotherilia/technomart/tree/gh-pages">build</a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
             <div class="info info--common js-popup" id="popup-crt-basic">
               <ul class="icon-list icon-list--close-btn">
                 <li class="icon-list__item">
@@ -416,81 +424,85 @@
           <h2 class="article__title" id="sedona">
             Sedona
           </h2>
-          <div class="article__text">
-            <div class="article__img">
-              <a class="article__img-link" href="http://brotherilia.github.io/sedona/">
-                <img src="tmp/ugc/img/sedona.jpg" width="230" height="230" alt="Sedona">
-              </a>
-            </div>
+          <div class="article__content">
             <p>
               Личный итоговый проект при прохождении интенсивного курса <a class="inline-link" href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a> в <a class="inline-link" href="https://htmlacademy.ru">HTML Academy</a>. Рабочие страницы: "Главная", "Фото и видео", "Форма отзыва". Адаптивная "резиновая" верстка для 3-х вьюпортов, адаптивная графика. Интерактивная карта.
             </p>
-            <table class="article__table">
-              <tr>
-                <td class="article__td">
-                  Степень реализации:
-                </td>
-                <td class="article__td">
-                  верстка
-                </td>
-              </tr>
-              <tr>
-                <td class="article__td">
-                  Адаптивность:
-                </td>
-                <td class="article__td">
-                  mobile, tablet, desktop
-                </td>
-              </tr>
-              <tr>
-                <td class="article__td">
-                  Сетка:
-                </td>
-                <td class="article__td">
-                  responsive
-                </td>
-              </tr>
-              <tr>
-                <td class="article__td">
-                  Методология:
-                </td>
-                <td class="article__td">
-                  БЭМ (именование классов)
-                </td>
-              </tr>
-              <tr>
-                <td class="article__td">
-                  CSS препроцессор:
-                </td>
-                <td class="article__td">
-                  LESS
-                </td>
-              </tr>
-              <tr>
-                <td class="article__td">
-                  Автоматизация:
-                </td>
-                <td class="article__td">
-                  Grunt
-                </td>
-              </tr>
-              <tr>
-                <td class="article__td">
-                  Соответствие критериям:
-                </td>
-                <td class="article__td">
-                  <a class="inline-link js-toggle" href="#popup-crt-advanced" id="crt-advanced-link">Посмотреть</a>
-                </td>
-              </tr>
-              <tr>
-                <td class="article__td">
-                  Исходные тексты:
-                </td>
-                <td class="article__td">
-                  <a class="inline-link" href="https://github.com/brotherilia/sedona">source</a>, <a class="inline-link" href="https://github.com/brotherilia/sedona/tree/gh-pages">build</a>
-                </td>
-              </tr>
-            </table>
+            <div class="article__addons">
+              <div class="article__img">
+                <a class="article__img-link" href="http://brotherilia.github.io/sedona/">
+                  <img src="tmp/ugc/img/sedona.jpg" width="230" height="230" alt="Sedona">
+                </a>
+              </div>
+              <div class="article__table">
+                <table class="common-table">
+                  <tr>
+                    <td class="common-table__td">
+                      Степень реализации:
+                    </td>
+                    <td class="common-table__td">
+                      верстка
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="common-table__td">
+                      Адаптивность:
+                    </td>
+                    <td class="common-table__td">
+                      mobile, tablet, desktop
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="common-table__td">
+                      Сетка:
+                    </td>
+                    <td class="common-table__td">
+                      responsive
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="common-table__td">
+                      Методология:
+                    </td>
+                    <td class="common-table__td">
+                      БЭМ (именование классов)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="common-table__td">
+                      CSS препроцессор:
+                    </td>
+                    <td class="common-table__td">
+                      LESS
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="common-table__td">
+                      Автоматизация:
+                    </td>
+                    <td class="common-table__td">
+                      Grunt
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="common-table__td">
+                      Соответствие критериям:
+                    </td>
+                    <td class="common-table__td">
+                      <a class="inline-link js-toggle" href="#popup-crt-advanced" id="crt-advanced-link">Посмотреть</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="common-table__td">
+                      Исходные тексты:
+                    </td>
+                    <td class="common-table__td">
+                      <a class="inline-link" href="https://github.com/brotherilia/sedona">source</a>, <a class="inline-link" href="https://github.com/brotherilia/sedona/tree/gh-pages">build</a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
             <div class="info info--common js-popup" id="popup-crt-advanced">
               <ul class="icon-list icon-list--close-btn">
                 <li class="icon-list__item">
@@ -718,6 +730,14 @@
           </h2>
           <ul class="info__items">
             <li class="info__item">
+              <time class="info__item-date" datetime="2016-08-02">
+                02.08.2016
+              </time>
+              <p>
+                Доделана "планшетная версия" этого сайта.
+              </p>
+            </li>
+            <li class="info__item">
               <time class="info__item-date" datetime="2016-07-25">
                 25.07.2016
               </time>
@@ -738,7 +758,7 @@
                 23.07.2016
               </time>
               <p>
-                Запущена новая версия сайта. В ней запланирована реализация адаптивной "резиновой" сетки и стилизация для 4-х вьюпортов. На данный момент работает только мобильная "версия".
+                Запущена новая версия сайта. В ней запланирована реализация адаптивной "резиновой" сетки и стилизация для 4-х вьюпортов. На данный момент работает только "мобильная версия".
               </p>
               <p>
                 Добавлен проект <a class="inline-link" href="projects.html#sedona">Sedona</a>.
