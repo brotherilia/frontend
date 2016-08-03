@@ -6,6 +6,11 @@
   flex-direction: column;
   justify-content: flex-end;
 
+  &::after {
+    .slogan();
+    bottom: 114px;
+  }
+
   @media @tablet-widths {
     flex-direction: row;
     justify-content: space-between;
@@ -13,9 +18,17 @@
     padding: 0 40px;
   }
 
-  &::after {
-    .slogan();
-    bottom: 114px;
-  }
+  @media @desktop-widths {
+    height: @icon-size * 1.5;
+    padding: 0;
+    background: @bg-color;
 
+    &::after {
+     transform: none;
+     left: auto;
+     right: 270px;
+     bottom: auto;
+     top: 14px;
+    }
+  }
 }

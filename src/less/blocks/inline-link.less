@@ -10,7 +10,9 @@
   }
 
   &:hover {
-    border-bottom: none;
-    color: @link-hover-color;
+    @media @desktop-widths {
+      border-bottom: none;
+      color: @link-hover-color;
+    }
   }
 }

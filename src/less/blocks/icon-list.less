@@ -1,6 +1,6 @@
 .icon-list {
   .reset-list();
-  height: 64px;
+  height: @icon-size * 2;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -9,14 +9,28 @@
     justify-content: space-between;
   }
 
-  &--close-btn {
-    position: absolute;
-    right: 20px;
-    top: 0;
+  &--mobile-bottom {
+    justify-content: space-between;
+    height: @icon-size * 2;
+
+    @media @desktop-widths {
+      height: @icon-size;
+    }
   }
 
-  &__item {
+  &--contacts {
 
+    @media @desktop-widths {
+      height: @icon-size * 1.5;
+      justify-content: space-around;
+    }
+  }
+
+  &--close-btn {
+    height: @icon-size;
+    position: absolute;
+    right: 5px;
+    top: 5px;
   }
 
   &__item--home,
@@ -25,6 +39,71 @@
 
     @media @tablet-widths {
       display: none;
+    }
+  }
+
+  &__item--projects {
+
+    @media @tablet-wide-widths {
+      display: none;
+    }
+  }
+
+  &__item--news {
+
+    @media @desktop-widths {
+      display: none;
+    }
+  }
+
+  &__item--home-bottom {
+
+    @media @tablet-widths {
+      display: none;
+    }
+  }
+
+  &__item--phone {
+
+    @media @desktop-widths {
+      position: relative;
+    }
+  }
+
+  &__item--to-top {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%);
+
+    @media @tablet-widths {
+      transform: none;
+      left: auto;
+      right: 40px;
+    }
+
+    @media @desktop-widths {
+      bottom: 55px;
+      right: auto;
+      left: 35px;
+    }
+  }
+
+  &__popup {
+    .popup();
+    color: @icon-color;
+    transform: none;
+    top: -55px;
+    left: -25px;
+    width: auto;
+    padding: 10px 20px;
+    white-space: nowrap;
+    font-weight: bold;
+    user-select: auto;
+
+    &::after {
+      .popup-bottom-arrow();
+      left: 20px;
     }
   }
 
@@ -37,17 +116,28 @@
     text-decoration: none;
     opacity: 0.5;
     cursor: pointer;
+    line-height: 0;
 
-     &:active {
+    &:active {
       transition-property: opacity, transform;
       transition-duration: 0.5s;
       transform: rotate(360deg);
       opacity: 1;
+    }
+
+    @media @desktop-widths {
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
   &__icon {
     .icon-size();
     fill: @icon-color;
+
+    @media @desktop-widths {
+      .icon-desktop-size();
+    }
   }
 }

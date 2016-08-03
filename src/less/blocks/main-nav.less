@@ -5,16 +5,28 @@
     top: 64px;
 
     &::before {
+      .popup-top-arrow();
       left: 33%;
-    }
-
-    &::after {
-      display: none;
     }
   }
 
   @media @tablet-widths {
-    margin-left: 40px;
+    .unpopup();
+    margin-left: 25px;
     order: 1;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media @desktop-widths {
+    .reset-spaces();
+    position: absolute;
+    width: 100%;
+    top: 76px;
+    left: 0;
+    padding-left: 241px;
+    z-index: 2;
   }
 }

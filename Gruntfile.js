@@ -211,7 +211,7 @@ module.exports = function(grunt) {
       },
       img: {
         files: ["src/img/**/*.{jpg,png,gif,svg}","src/tmp/ugc/**/*.{jpg,png,gif,svg}"],
-        tasks: ["copy:img", "imagemin"],
+        tasks: ["copy:img", "imagemin", "svg"],
         options: {spawn: false}
       },
       js: {

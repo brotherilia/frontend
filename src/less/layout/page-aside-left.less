@@ -1,3 +1,33 @@
 .page-aside-left {
+  flex-shrink: 0;
 
+  @media @tablet-widths {
+    width: 180px;
+  }
+
+  @media @desktop-widths {
+    width: 240px;
+    position: relative;
+    background-color: @bg-color;
+
+    &::before {
+      .pseudo-common();
+      width: 240px;
+      height: 100px;
+      top: 0;
+      left: 0;
+      background: linear-gradient(@slogan-color 0%, @bg-alt1-color 100%);
+      border-bottom-right-radius: 50px;
+      z-index: 1;
+    }
+
+    &::after {
+      .pseudo-common();
+      width: 1px;
+      height: 75px;
+      top: -75px;
+      left: 240px;
+      background: @logo-color;
+    }
+  }
 }

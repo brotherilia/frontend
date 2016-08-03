@@ -10,12 +10,17 @@
 
 .container() {
   min-width: 320px;
-  max-width: 899px;
+  /* max-width: 1199px; */
 }
 
 .icon-size() {
   width: @icon-size;
   height: @icon-size;
+}
+
+.icon-desktop-size() {
+  width: @icon-size / 1.5;
+  height: @icon-size / 1.5;
 }
 
 .pseudo-common() {
@@ -25,8 +30,7 @@
 }
 
 .slogan() {
-  position: absolute;
-  display: block;
+  .pseudo-common();
   white-space: nowrap;
   content: "Front-end Development";
   font-family: @title-font-family;
@@ -60,25 +64,36 @@
   border-radius: 20px;
   background-color: @slogan-color;
   box-shadow: 5px 5px 20px 0px @logo-color;
-  z-index: 2;
+  z-index: 1;
+}
 
-  &::before,
-  &::after {
-    .pseudo-common();
-    width: 30px;
-    height: 30px;
-    border: 15px solid @slogan-color;
-    border-right: 15px solid transparent;
-    border-left: 15px solid transparent;
-  }
+.unpopup() {
+  display: block;
+  position: static;
+  transform: none;
+  width: auto;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  z-index: 0;
+}
 
-  &::before {
-    top: -30px;
-    border-top: 15px solid transparent;
-  }
+.popup-arrow() {
+  .pseudo-common();
+  width: 30px;
+  height: 30px;
+  border: 15px solid transparent;
+}
 
-  &::after {
-    bottom: -30px;
-    border-bottom: 15px solid transparent;
-  }
+.popup-top-arrow() {
+  .popup-arrow();
+  top: -30px;
+  border-bottom: 15px solid @slogan-color;
+}
+
+.popup-bottom-arrow() {
+  .popup-arrow();
+  bottom: -30px;
+  border-top: 15px solid @slogan-color;
 }

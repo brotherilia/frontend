@@ -1,20 +1,25 @@
 .contacts-nav {
+  .popup();
+  bottom: 64px;
 
-  @media @mobile-widths {
-    .popup();
-    bottom: 64px;
-
-    &::before {
-      display: none;
-    }
-
-    &::after {
-      right: 10%;
-    }
+  &::after {
+    .popup-bottom-arrow();
+    right: 10%;
   }
 
   @media @tablet-widths {
+    .unpopup();
     width: 50%;
+
+    &::after {
+      display: none;
+    }
   }
 
+  @media @desktop-widths {
+    width: 240px;
+    padding: 0 15px;
+    background: @bg-color;
+    order: 2;
+  }
 }

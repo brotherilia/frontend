@@ -1,14 +1,39 @@
 .mobile-nav {
 
   @media @tablet-widths {
-    width: 17%;
+    width: 15%;
+  }
+
+  @media @desktop-widths {
+    width: 3%;
   }
 
   &--top {
 
     @media @tablet-widths {
+      width: 13%;
       margin-right: 40px;
       order: 2;
+    }
+
+    @media @tablet-wide-widths {
+      width: 3%;
+    }
+
+    @media @desktop-widths {
+      display: none;
+    }
+  }
+
+  &--bottom {
+    padding: 0 40px;
+
+    @media @desktop-widths {
+      height: @icon-size * 1.5;
+      background: linear-gradient(to left, @slogan-color, @bg-alt1-color 150px);
+      border-top-right-radius: 20px;
+      flex-grow: 1;
+      order: 1;
     }
   }
 }

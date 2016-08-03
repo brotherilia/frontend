@@ -1,48 +1,82 @@
 .logo {
+  padding-top: 30px;
+  padding-left: 30px;
   position: relative;
   width: 100%;
   height: 160px;
   background: url("../img/bg-logo.png") no-repeat scroll 5px 15px, linear-gradient(@bg-color 0%, @bg-alt1-color 100%);
 
+  &::before {
+    .pseudo-common();
+    width: 50%;
+    height: 4px;
+    top: 91px;
+    left: 68px;
+    background: linear-gradient(to right, @logo-color 0%, transparent 100%);
+  }
+
   &::after {
-    .slogan();
-    top: 5px;
+    .pseudo-common();
+    width: 50%;
+    height: 2px;
+    top: 97px;
+    left: 67px;
+    background: linear-gradient(to right, @logo-color 0%, transparent 100%);
   }
 
   @media @tablet-widths {
     order: 3;
   }
 
-  &__ilya {
-    position: relative;
-    height: 95px;
-    padding-top: 30px;
-    padding-left: 30px;
+  @media @desktop-widths {
+    height: 75px;
+    padding-top: 35px;
+    padding-left: 85px;
+    background: linear-gradient(@bg-color 0%, @slogan-color 100%);
 
     &::before {
-      .pseudo-common();
-      width: 50%;
-      height: 4px;
-      bottom: 0;
-      left: 70px;
-      background: linear-gradient(to right, @logo-color 0%, transparent 100%);
+      width: 150px;
+      height: 2px;
+      top: 72px;
+      left: 108px;
+      background: @logo-color;
+      z-index: 2;
     }
 
     &::after {
-      .pseudo-common();
-      width: 50%;
-      height: 2px;
-      bottom: -4px;
-      left: 67px;
-      background: linear-gradient(to right, @logo-color 0%, transparent 100%);
+      width: 150px;
+      height: 1px;
+      top: 75px;
+      left: 107px;
+      background: @logo-color 0%;
+      z-index: 2;
     }
   }
 
-  &__menshikov {
-    color: #000000;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, .5);
-    padding-top: 10px;
-    padding-left: 65px;
+  &__ilya {
+    position: relative;
+    width: 100px;
+    height: 65px;
+
+    &::after {
+      .pseudo-common();
+      bottom: -20px;
+      left: 35px;
+      z-index: 2;
+      content: "Menshikov";
+      color: #000000;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 1px rgba(0, 0, 0, .5);
+
+      @media @desktop-widths {
+        letter-spacing: inherit;
+        left: 0;
+      }
+    }
+
+    @media @desktop-widths {
+      width: 60px;
+      height: 40px;
+    }
   }
 }

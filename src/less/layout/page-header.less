@@ -3,9 +3,33 @@
   flex-direction: column;
   background-color: @bg-color;
 
+  &::after {
+    .slogan();
+    top: 70px;
+  }
+
   @media @tablet-widths {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  @media @desktop-widths {
+
+    &::before {
+      .pseudo-common();
+      width: 240px;
+      height: 240px;
+      background: url("../img/bg-logo-desktop.png") no-repeat scroll -30px 5px;
+      z-index: 2;
+    }
+
+    &::after {
+      transform: none;
+      left: auto;
+      right: 20px;
+      top: 15px;
+      font-size: 36px;
+    }
   }
 }
