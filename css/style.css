@@ -556,11 +556,6 @@ img {
 
   border-bottom: 1px dotted;
 }
-.inline-link:hover {
-  color: #d74f04;
-
-  border-bottom: none;
-}
 .css-icon {
   position: relative;
 
@@ -804,7 +799,7 @@ img {
   position: absolute;
   top: 64px;
   left: 50%;
-  z-index: 2;
+  z-index: 1;
 
   display: none;
   width: 90%;
@@ -833,7 +828,7 @@ img {
   position: absolute;
   bottom: 64px;
   left: 50%;
-  z-index: 2;
+  z-index: 1;
 
   display: none;
   width: 90%;
@@ -924,8 +919,35 @@ img {
 }
 .icon-list--close-btn {
   position: absolute;
-  top: 0;
-  right: 20px;
+  top: 5px;
+  right: 5px;
+
+  height: 32px;
+}
+.icon-list__hover-popup {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  left: 0;
+  z-index: 1;
+
+  display: none;
+  width: 90%;
+  width: auto;
+  padding: 20px;
+  padding: 10px;
+
+  font-weight: bold;
+  color: #ca7e7d;
+  white-space: nowrap;
+
+  background-color: #f2dfdf;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px 0 #980000;
+  -webkit-transform: translate(-50%);
+  -webkit-transform: none;
+          transform: translate(-50%);
+          transform: none;
 }
 .icon-list__link {
   display: block;
@@ -951,9 +973,6 @@ img {
           transition-property: opacity, -webkit-transform;
           transition-property: opacity, transform;
           transition-property: opacity, transform, -webkit-transform;
-}
-.icon-list__link:hover {
-  opacity: 1;
 }
 .icon-list__icon {
   width: 32px;
@@ -1109,7 +1128,7 @@ img {
   position: absolute;
   top: 64px;
   left: 50%;
-  z-index: 2;
+  z-index: 1;
 
   display: none;
   width: 90%;
@@ -1136,14 +1155,13 @@ img {
 }
 .info--common {
   position: absolute;
-  top: 100%;
+  top: 40px;
   left: 50%;
-  left: 0;
-  z-index: 2;
+  z-index: 1;
 
   display: none;
   width: 90%;
-  width: 100%;
+  width: 85%;
   margin-bottom: 20px;
   padding: 20px;
 
@@ -1153,9 +1171,7 @@ img {
   border-radius: 20px;
   box-shadow: 5px 5px 20px 0 #980000;
   -webkit-transform: translate(-50%);
-  -webkit-transform: translate(0, -60px);
           transform: translate(-50%);
-          transform: translate(0, -60px);
 }
 .info__title {
   margin: 10px 0;
@@ -1252,6 +1268,7 @@ img {
   }
   .main-nav {
     position: static;
+    z-index: 0;
 
     display: block;
     -ms-flex-order: 1;
@@ -1276,6 +1293,7 @@ img {
   }
   .contacts-nav {
     position: static;
+    z-index: 0;
 
     display: block;
     width: auto;
@@ -1355,6 +1373,7 @@ img {
   }
   .projects-nav {
     position: static;
+    z-index: 0;
 
     display: block;
     width: auto;
@@ -1412,6 +1431,11 @@ img {
   .page-footer::after {
     display: none;
   }
+  .inline-link:hover {
+    color: #d74f04;
+
+    border-bottom: none;
+  }
   .mobile-nav {
     width: 3%;
   }
@@ -1422,12 +1446,22 @@ img {
   .icon-list__item--home-bottom {
     display: none;
   }
+  .icon-list__item--phone {
+    position: relative;
+  }
+  .icon-list__item--phone:hover > .icon-list__hover-popup {
+    display: block;
+  }
+  .icon-list__link:hover {
+    opacity: 1;
+  }
   .icon-list__icon {
     width: 21.33333333px;
     height: 21.33333333px;
   }
   .info--news {
     position: static;
+    z-index: 0;
 
     display: block;
     width: auto;
@@ -1472,7 +1506,7 @@ img {
     position: absolute;
     top: 64px;
     left: 50%;
-    z-index: 2;
+    z-index: 1;
 
     display: none;
     width: 90%;
