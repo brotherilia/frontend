@@ -46,7 +46,7 @@ $(document).ready(function(){                       // зaпускaем скри
       }
     }
     if ($(window).width() > "1182"){                // десктопная и больше ширина окна браузера
-      $(popupPhone).fadeOut();                   // прячем окно с телефоном
+      $(popupPhone).fadeOut();                      // прячем окно с телефоном
     }
   }
 
@@ -61,12 +61,12 @@ $(document).ready(function(){                       // зaпускaем скри
     if (displayMode == "none"){                     // если нужное модальное окно скрыто
       $(closePopups);                               // вызываем функцию скрытия модальных окон
       $(resetIcons);                                // вызываем функцию восстанавления исходных иконок у ссылок
-      $(popup).fadeIn();                         // и отображаем нужное модальное окно
+      $(popup).fadeIn();                            // и отображаем нужное модальное окно
       $(thisIcon).removeClass()                     // сбрасываем стили у иконки
              .addClass("css-icon css-icon--cross"); // и добавляем ей стиль общий для всех иконок и стиль крестика
     }
     else{                                           // если нужное модальное окно открыто
-      $(popup).fadeOut();                        // прячем его
+      $(popup).fadeOut();                           // прячем его
       $(thisIcon).removeClass()                     // сбрасываем стили у иконки
              .addClass("css-icon "+thisIconClass);  // и добавляем ей стиль общий для всех иконок и ее сохраненнный уникальный стиль
     }
@@ -83,6 +83,9 @@ $(document).ready(function(){                       // зaпускaем скри
     $(resetIcons);                                  // и вызываем функцию восстанавления исходных иконок у ссылок
   });
   $(toggleAll).click(function(event){               // обрабатываем клик по ссылке с клaссoм js-toggle
+      event.stopImmediatePropagation();             // не позволит выполниться обработчику события для body, если клик произошел на указанном элементе или его потомках
+  });
+  $(popupAll).click(function(event){                // обрабатываем клик по ссылке с клaссoм js-popup
       event.stopImmediatePropagation();             // не позволит выполниться обработчику события для body, если клик произошел на указанном элементе или его потомках
   });
   $(phone).click(function(event){                   // обрабатываем клик по элементу с id js-phone
@@ -123,7 +126,7 @@ $(document).ready(function(){                       // зaпускaем скри
       event.preventDefault();                         // вырубaем стaндaртнoе пoведение
       var displayMode = $(popupPhone).css("display"); // определяем, отображено ли нужное модальное окно
       if (displayMode == "none"){                     // если нужное модальное окно скрыто
-        $(popupPhone).fadeIn();                    // отображаем его
+        $(popupPhone).fadeIn();                       // отображаем его
       }
       else{                                           // если нужное модальное окно открыто
         $(closePopups);                               // вызываем функцию скрытия модальных окон

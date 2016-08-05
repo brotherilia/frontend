@@ -863,7 +863,7 @@ img {
       flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  height: 64px;
+  height: 100%;
   margin: 0;
   padding: 0;
 
@@ -1343,6 +1343,9 @@ img {
   }
   .contacts-nav::after {
     display: none;
+  }
+  .menu-list--main {
+    height: 64px;
   }
   .menu-list__item {
     margin-right: 0;
