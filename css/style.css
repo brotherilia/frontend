@@ -1085,10 +1085,10 @@ img {
 .article-wrapper {
   position: relative;
 
-  padding: 20px;
-  padding-top: 0;
+  padding: 0 20px;
 }
 .article {
+  margin-bottom: 20px;
   padding: 3px;
 
   background-image: -webkit-linear-gradient(right bottom, rgba(217, 163, 162, 0.3), #ffffff);
@@ -1108,7 +1108,6 @@ img {
   color: #c29291;
 }
 .article__content {
-  /* height: 100%; */
   padding: 20px;
 
   text-align: justify;
@@ -1547,12 +1546,10 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-        flex-wrap: wrap;
     justify-content: space-between;
 
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    -ms-flex-wrap: wrap;
   }
   .article-wrapper {
     width: 50%;
