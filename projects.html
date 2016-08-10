@@ -21,64 +21,66 @@
       <!--                                                              -->
       <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       <header class="page-header">
-        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <!--                                                              -->
-        <!--                      MOBILE NAV TOP                          -->
-        <!--                                                              -->
-        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <nav class="mobile-nav mobile-nav--top">
-          <ul class="icon-list">
-            <li class="icon-list__item icon-list__item--home">
-              <a class="icon-list__link" href="index.html">
-                <i class="css-icon css-icon--home">
-                  <div class="css-icon__body"></div>
-                </i>
-              </a>
-            </li>
-            <li class="icon-list__item icon-list__item--menu">
-              <button class="icon-list__link js-toggle" id="css-icon--menu" href="#popup-menu">
-                <i class="css-icon css-icon--menu">
-                  <div class="css-icon__body"></div>
-                </i>
-              </button>
-            </li>
-            <li class="icon-list__item icon-list__item--projects">
-              <button class="icon-list__link js-toggle" id="css-icon--briefcase" href="#popup-projects">
-                <i class="css-icon css-icon--briefcase">
-                  <div class="css-icon__body"></div>
-                </i>
-              </button>
-            </li>
-            <li class="icon-list__item icon-list__item--news">
-              <button class="icon-list__link js-toggle" id="css-icon--hot" href="#popup-news">
-                <i class="css-icon css-icon--hot">
-                  <div class="css-icon__body"></div>
-                </i>
-              </button>
-            </li>
-          </ul>
-        </nav>
-        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <!--                                                              -->
-        <!--                          MAIN NAV                            -->
-        <!--                                                              -->
-        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <nav class="main-nav js-popup" id="popup-menu">
-          <ul class="menu-list menu-list--main">
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="index.html">Главная</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="study.html">Учеба</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="projects.html">Проекты</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link-dsbl">Ссылки</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="page-header__navbar">
+          <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+          <!--                                                              -->
+          <!--                      MOBILE NAV TOP                          -->
+          <!--                                                              -->
+          <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+          <nav class="mobile-nav mobile-nav--top">
+            <ul class="icon-list">
+              <li class="icon-list__item icon-list__item--home">
+                <a class="icon-list__link" href="index.html">
+                  <i class="css-icon css-icon--home">
+                    <div class="css-icon__body"></div>
+                  </i>
+                </a>
+              </li>
+              <li class="icon-list__item icon-list__item--menu">
+                <button class="icon-list__link js-toggle" id="css-icon--menu" href="#popup-menu">
+                  <i class="css-icon css-icon--menu">
+                    <div class="css-icon__body"></div>
+                  </i>
+                </button>
+              </li>
+              <li class="icon-list__item icon-list__item--projects">
+                <button class="icon-list__link js-toggle" id="css-icon--briefcase" href="#popup-projects">
+                  <i class="css-icon css-icon--briefcase">
+                    <div class="css-icon__body"></div>
+                  </i>
+                </button>
+              </li>
+              <li class="icon-list__item icon-list__item--news">
+                <button class="icon-list__link js-toggle" id="css-icon--hot" href="#popup-news">
+                  <i class="css-icon css-icon--hot">
+                    <div class="css-icon__body"></div>
+                  </i>
+                </button>
+              </li>
+            </ul>
+          </nav>
+          <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+          <!--                                                              -->
+          <!--                          MAIN NAV                            -->
+          <!--                                                              -->
+          <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+          <nav class="main-nav js-popup" id="popup-menu">
+            <ul class="menu-list menu-list--main">
+              <li class="menu-list__item">
+                <a class="menu-list__link js-main-menu-link" href="/index.html">Главная</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link js-main-menu-link" href="/study.html">Учеба</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link js-main-menu-link" href="/projects.html">Проекты</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link-dsbl">Ссылки</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <!--                                                              -->
         <!--                            LOGO                              -->
@@ -139,7 +141,7 @@
         <!--                                                              -->
         <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <main class="page-main">
-          <div class="article-wrapper">
+          <div class="page-main__column">
             <article class="article">
               <h2 class="article__title" id="menshikov">
                 menshikov.su
@@ -441,7 +443,7 @@
               </div>
             </article>
           </div>
-          <div class="article-wrapper">
+          <div class="page-main__column">
             <article class="article">
               <h2 class="article__title" id="astowell">
                 Astowell
@@ -888,8 +890,8 @@
                 </i>
               </a>
             </li>
-            <li class="icon-list__item icon-list__item--to-top">
-              <a class="icon-list__link" id="to-top" href="#top">
+            <li class="icon-list__item icon-list__item--to-top" id="to-top">
+              <a class="icon-list__link" href="#top">
                 <i class="css-icon css-icon--up-arrow">
                   <div class="css-icon__body"></div>
                 </i>

@@ -2,12 +2,25 @@ $(document).ready(function(){                       // зaпускaем скри
 
   /* Открытие-закрытие модальных окон */
 
-  var toggleAll  = $(".js-toggle");                 // все ссылки, кoтoрые будут oткрывaть-закрывать oкнa
-  var closeAll   = $(".js-close");                  // все ссылки, кoтoрые будут закрывaть oкнa
-  var popupAll   = $(".js-popup");                  // все скрытые мoдaльные oкнa
-  var phone      = $("#js-phone");                  // блок телефона
-  var showPhone  = $("#js-phone-link");             // ссылка на телефон
-  var popupPhone = $("#js-phone-popup");            // окно с телефоном
+  var toggleAll   = $(".js-toggle");                 // все ссылки, кoтoрые будут oткрывaть-закрывать oкнa
+  var closeAll    = $(".js-close");                  // все ссылки, кoтoрые будут закрывaть oкнa
+  var popupAll    = $(".js-popup");                  // все скрытые мoдaльные oкнa
+  var phone       = $("#js-phone");                  // блок телефона
+  var showPhone   = $("#js-phone-link");             // ссылка на телефон
+  var popupPhone  = $("#js-phone-popup");            // окно с телефоном
+  var mainMenuAll = $(".js-main-menu-link");         // все ссылки в главном меню
+
+  var setActiveLink = function(){                                                                    // функция установки стилей для ссылки текущей страницы в главном меню:
+    for (var i = 0; i < mainMenuAll.length; i++){                                                    // в цикле по ссылкам главного меню
+      var linkAddr = $(mainMenuAll[i]).attr("href");                                                 // сохраняем адрес ссылки
+      if (linkAddr == document.location.pathname && $(window).width() > "1182"){                     // если адрес ссылки равен адресу текущей страницы и десктопная или больше ширина окна браузера
+        $(mainMenuAll[i]).removeClass("menu-list__link").addClass("menu-list__link-desktop-active"); // меняем ей стиль на стиль активной ссылки
+      }
+      else{                                                                                          // иначе
+        $(mainMenuAll[i]).removeClass("menu-list__link-desktop-active").addClass("menu-list__link"); // меняем ей стиль на стиль обычной ссылки
+      }
+    }
+  }
 
   var resetIcons = function(){                      // функция восстанавления исходных иконок у ссылок:
     for (var i = 0; i < toggleAll.length; i++){     // в цикле по ссылкам-переключателям
@@ -50,6 +63,8 @@ $(document).ready(function(){                       // зaпускaем скри
     }
   }
 
+  $(setActiveLink);                                 // вызываем функцию установки стилей для ссылки текущей страницы в главном меню
+
   toggleAll.click(function(event){                  // лoвим клик пo ссылке с клaссoм js-toggle
     event.preventDefault();                         // вырубaем стaндaртнoе пoведение
 
@@ -83,13 +98,15 @@ $(document).ready(function(){                       // зaпускaем скри
     $(resetIcons);                                  // и вызываем функцию восстанавления исходных иконок у ссылок
   });
   $(toggleAll).click(function(event){               // обрабатываем клик по ссылке с клaссoм js-toggle
-      event.stopImmediatePropagation();             // не позволит выполниться обработчику события для body, если клик произошел на указанном элементе или его потомках
+    event.stopImmediatePropagation();               // не позволит выполниться обработчику события для body, если клик произошел на указанном элементе или его потомках
   });
   $(popupAll).click(function(event){                // обрабатываем клик по ссылке с клaссoм js-popup
+    if ($(window).width() < "1183"){                // десктопная и больше ширина окна браузера
       event.stopImmediatePropagation();             // не позволит выполниться обработчику события для body, если клик произошел на указанном элементе или его потомках
+    }
   });
   $(phone).click(function(event){                   // обрабатываем клик по элементу с id js-phone
-      event.stopImmediatePropagation();             // не позволит выполниться обработчику события для body, если клик произошел на указанном элементе или его потомках
+    event.stopImmediatePropagation();               // не позволит выполниться обработчику события для body, если клик произошел на указанном элементе или его потомках
   });
 
   $(window).resize(function(){                      // обрабатываем изменение ширины окна браузера
@@ -111,10 +128,12 @@ $(document).ready(function(){                       // зaпускaем скри
     }
     if ($(window).width() > "1182"){                // десктопная и больше ширина окна браузера
       $("#popup-news").show();                      // показываем модальное окно "новости"
+      $(setActiveLink);                             // вызываем функцию установки стилей для ссылки текущей страницы в главном меню
     }
     else {                                          // планшетная широкая и меньше ширина окна браузера
       $("#popup-news").hide();                      // скрываем модальное окно "новости"
       $(resetIcons);                                // и вызываем функцию восстанавления исходных иконок у ссылок
+      $(setActiveLink);                             // вызываем функцию установки стилей для ссылки текущей страницы в главном меню
     }
     if ($(window).width() < "1183"){                // ширина окна браузера меньше десктопной
       $(popupPhone).hide();                         // скрываем модальное окно телефона
