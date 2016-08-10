@@ -1,5 +1,9 @@
 .page-main {
 
+  @media @tablet-wide-widths {
+    flex-grow: 1;
+  }
+
   @media @desktop-widths {
     background-color: @bg-color;
     padding-top: 50px;
@@ -8,5 +12,18 @@
   @media @desktop-wide-widths {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__column {
+    padding: 0 20px;
+
+    @media @desktop-wide-widths {
+      width: 50%;
+      padding-right: 0;
+
+      &:nth-child(even) {
+        padding-right: 20px;
+      }
+    }
   }
 }

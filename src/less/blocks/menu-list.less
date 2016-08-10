@@ -17,7 +17,7 @@
       justify-content: flex-start;
       height: auto;
       background: linear-gradient(to bottom, @bg-color, @bg-alt2-color 100%);
-      outline: 1px solid @logo-color;
+      box-shadow: 0 0 0 1px @logo-color;
 
       &::before {
         .pseudo-common();
@@ -131,6 +131,15 @@
         }
       }
     }
+  }
+
+  &__link-desktop-active {
+    display: block;
+    padding: 5px 20px;
+    font-weight: bold;
+    color: @base-text-color;
+    background: linear-gradient(to top, @bg-color, @bg-alt2-color 100%);
+    cursor: default;
   }
 
   &__link-dsbl {

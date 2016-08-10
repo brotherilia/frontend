@@ -10,7 +10,6 @@
 
 .container() {
   min-width: 320px;
-  /* max-width: 1199px; */
 }
 
 .icon-size() {
@@ -46,12 +45,21 @@
   font-size: @title-font-size;
   font-weight: bold;
   line-height: @title-font-size;
+  color: @base-text-color;
 }
 
 .subtitle() {
   .title();
   font-size: @subtitle-font-size;
   line-height: @subtitle-font-size;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.subsubtitle() {
+  .title();
+  font-size: @subsubtitle-font-size;
+  line-height: @subsubtitle-font-size;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
 
 .popup() {
@@ -64,7 +72,7 @@
   border-radius: 20px;
   background-color: @slogan-color;
   box-shadow: 5px 5px 20px 0px @logo-color;
-  z-index: 1;
+  z-index: 3;
 }
 
 .unpopup() {

@@ -65,12 +65,13 @@
 
   &__item--phone {
 
-    @media @desktop-widths {
+    @media @tablet-widths {
       position: relative;
     }
   }
 
   &__item--to-top {
+    display: none;
     position: fixed;
     bottom: 15px;
     left: 50%;
@@ -99,7 +100,7 @@
     padding: 10px 20px;
     white-space: nowrap;
     font-weight: bold;
-    user-select: auto;
+    user-select: text;
 
     &::after {
       .popup-bottom-arrow();

@@ -11,6 +11,7 @@ body {
   min-width: 320px;
   font-family: @base-font-family;
   font-size: @base-font-size;
+  line-height: @base-line-height;
   color: @base-text-color;
   background-color: @bg-color;
   user-select: none;
@@ -19,19 +20,19 @@ body {
 p {
   .reset-spaces();
   margin-bottom: 10px;
-  line-height: @base-line-height;
+  text-align: justify;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   .reset-spaces();
   font-weight: normal;
 }
 
 a {
   text-decoration: none;
-  white-space: nowrap;
 }
 
 img {
@@ -41,4 +42,13 @@ img {
 
 .comment {
   font-style: italic;
+}
+
+.strong-comment {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.nowrap {
+  white-space: nowrap;
 }

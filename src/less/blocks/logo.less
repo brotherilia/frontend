@@ -24,10 +24,6 @@
     background: linear-gradient(to right, @logo-color 0%, transparent 100%);
   }
 
-  @media @tablet-widths {
-    order: 3;
-  }
-
   @media @desktop-widths {
     height: 75px;
     padding-top: 35px;
@@ -35,7 +31,7 @@
     background: linear-gradient(@bg-color 0%, @slogan-color 100%);
 
     &::before {
-      width: 150px;
+      width: 133px;
       height: 2px;
       top: 72px;
       left: 108px;
@@ -44,7 +40,7 @@
     }
 
     &::after {
-      width: 150px;
+      width: 134px;
       height: 1px;
       top: 75px;
       left: 107px;
@@ -53,10 +49,17 @@
     }
   }
 
-  &__ilya {
+  &__link {
+    display: block;
+    line-height: 0;
+  }
+
+  &__img {
     position: relative;
     width: 100px;
     height: 65px;
+    z-index: 2;
+
 
     &::after {
       .pseudo-common();

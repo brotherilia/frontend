@@ -84,11 +84,11 @@ module.exports = function(grunt) {
     processhtml: {
       target: {
         files: {
-          "build/tmp/ugc/article__prj_technomart.html": ["build/tmp/ugc/article__prj_technomart.html"],
-          "build/tmp/ugc/article__prj_sedona.html": ["build/tmp/ugc/article__prj_sedona.html"],
           "build/index.html": ["build/index.html"],
           "build/study.html": ["build/study.html"],
-          "build/projects.html": ["build/projects.html"]
+          "build/projects.html": ["build/projects.html"],
+          "build/links.html": ["build/links.html"],
+          "build/criteria.html": ["build/criteria.html"]
         }
       }
     },

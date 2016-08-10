@@ -1,0 +1,35 @@
+.common-list {
+  .reset-list();
+  margin-bottom: 20px;
+  text-align: justify;
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__item-dt {
+    .reset-spaces();
+    display: inline;
+  }
+
+  &__item-dd {
+    .reset-spaces();
+    display: inline;
+    font-size: @smaller-font-size;
+
+    &::before {
+      content: "-";
+    }
+
+    &::after {
+      content: "\A";
+      white-space: pre;
+    }
+  }
+
+  &__item-date {
+    font-size: @smaller-font-size;
+    border-bottom: 1px dotted @base-text-color;
+    line-height: @subtitle-font-size;
+  }
+}
