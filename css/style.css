@@ -821,7 +821,7 @@ img {
   position: absolute;
   top: 64px;
   left: 50%;
-  z-index: 1;
+  z-index: 3;
 
   display: none;
   width: 90%;
@@ -850,7 +850,7 @@ img {
   position: absolute;
   bottom: 64px;
   left: 50%;
-  z-index: 1;
+  z-index: 3;
 
   display: none;
   width: 90%;
@@ -966,7 +966,7 @@ img {
   top: -55px;
   left: 50%;
   left: -25px;
-  z-index: 1;
+  z-index: 3;
 
   display: none;
   width: 90%;
@@ -1073,13 +1073,19 @@ img {
   background: -webkit-linear-gradient(left, #980000 0%, transparent 100%);
   background:         linear-gradient(to right, #980000 0%, transparent 100%);
 }
-.logo__ilya {
+.logo__link {
+  display: block;
+
+  line-height: 0;
+}
+.logo__img {
   position: relative;
+  z-index: 2;
 
   width: 100px;
   height: 65px;
 }
-.logo__ilya::after {
+.logo__img::after {
   content: "";
   content: "Menshikov";
   position: absolute;
@@ -1094,11 +1100,11 @@ img {
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
 }
 .article-wrapper {
-  position: relative;
-
   padding: 0 20px;
 }
 .article {
+  position: relative;
+
   margin-bottom: 20px;
   padding: 3px;
 
@@ -1117,6 +1123,34 @@ img {
   line-height: 24px;
   font-family: "Jura", Arial, sans-serif;
   color: #c29291;
+}
+.article__subtitle {
+  margin: 10px 0;
+
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "Jura", Arial, sans-serif;
+}
+.article__subsubtitle {
+  margin: 10px 0;
+
+  font-weight: bold;
+  font-size: 24px;
+  font-size: 18px;
+  line-height: 24px;
+  line-height: 18px;
+  font-family: "Jura", Arial, sans-serif;
+}
+.article__items {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  list-style: none;
+}
+.article__item {
+  margin-top: 10px;
 }
 .article__content {
   padding: 20px;
@@ -1173,7 +1207,7 @@ img {
   position: absolute;
   top: 64px;
   left: 50%;
-  z-index: 1;
+  z-index: 3;
 
   display: none;
   width: 90%;
@@ -1202,7 +1236,7 @@ img {
   position: absolute;
   top: 40px;
   left: 50%;
-  z-index: 1;
+  z-index: 3;
 
   display: none;
   width: 90%;
@@ -1826,12 +1860,12 @@ img {
 
     background: #980000 0;
   }
-  .logo__ilya::after {
+  .logo__img::after {
     left: 0;
 
     letter-spacing: inherit;
   }
-  .logo__ilya {
+  .logo__img {
     width: 60px;
     height: 40px;
   }
@@ -1883,7 +1917,7 @@ img {
     position: absolute;
     top: 64px;
     left: 50%;
-    z-index: 1;
+    z-index: 3;
 
     display: none;
     width: 90%;
