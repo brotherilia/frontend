@@ -10,6 +10,25 @@ $(document).ready(function(){                       // зaпускaем скри
   var popupPhone  = $("#js-phone-popup");            // окно с телефоном
   var mainMenuAll = $(".js-main-menu-link");         // все ссылки в главном меню
 
+  var showAdaptation = function(){                   // функция показа текущей версии сайта
+    $("#js-adaptation").css({"white-space": "nowrap"}); // запрещаем разрыв содержимого в теге с #js-adaptation
+    if ($(window).width() < "583"){                  // если мобильная версия
+      $("#js-adaptation").text("mobile");            // пишем в тег с #js-adaptation "mobile"
+    }
+    if ($(window).width() > "582"){                  // если планшетная версия
+      $("#js-adaptation").text("tablet");            // пишем в тег с #js-adaptation "tablet"
+    }
+    if ($(window).width() > "882"){                  // если планшетная широкая версия
+      $("#js-adaptation").text("tablet wide");       // пишем в тег с #js-adaptation "tablet wide"
+    }
+    if ($(window).width() > "1182"){                 // если десктопная версия
+      $("#js-adaptation").text("desktop");           // пишем в тег с #js-adaptation "desktop"
+    }
+    if ($(window).width() > "1582"){                 // если десктопная широкая версия
+      $("#js-adaptation").text("desktop wide");      // пишем в тег с #js-adaptation "desktop wide"
+    }
+  }
+
   var setActiveLink = function(){                                                                    // функция установки стилей для ссылки текущей страницы в главном меню:
     for (var i = 0; i < mainMenuAll.length; i++){                                                    // в цикле по ссылкам главного меню
       var linkAddr = $(mainMenuAll[i]).attr("href");                                                 // сохраняем адрес ссылки
@@ -63,7 +82,15 @@ $(document).ready(function(){                       // зaпускaем скри
     }
   }
 
+  $(showAdaptation);                                // вызываем функцию показа текущей версии сайта
+
   $(setActiveLink);                                 // вызываем функцию установки стилей для ссылки текущей страницы в главном меню
+
+  mainMenuAll.click(function(event){                // лoвим клик пo ссылке с клaссoм js-main-menu-link
+    if ($(this).hasClass("menu-list__link-desktop-active")){ // если ссылка содержит класс активной ссылки
+      event.preventDefault();                       // вырубaем стaндaртнoе пoведение
+    }
+  });
 
   toggleAll.click(function(event){                  // лoвим клик пo ссылке с клaссoм js-toggle
     event.preventDefault();                         // вырубaем стaндaртнoе пoведение
@@ -110,6 +137,7 @@ $(document).ready(function(){                       // зaпускaем скри
   });
 
   $(window).resize(function(){                      // обрабатываем изменение ширины окна браузера
+    $(showAdaptation);                              // вызываем функцию показа текущей версии сайта
     if ($(window).width() > "582"){                 // планшетная и больше ширина окна браузера
       $("#popup-menu").show();                      // показываем модальное окно "меню"
       $("#popup-contacts").show();                  // и модальное окно "контакты"

@@ -482,6 +482,10 @@ img {
 .comment {
   font-style: italic;
 }
+.strong-comment {
+  font-weight: bold;
+  font-style: italic;
+}
 .overall-wrapper {
   /* max-width: 1199px; */
   position: relative;
