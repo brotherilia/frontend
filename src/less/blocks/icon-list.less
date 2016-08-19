@@ -116,7 +116,7 @@
     background: none;
     text-decoration: none;
     opacity: 0.5;
-    cursor: pointer;
+    cursor: default;
     line-height: 0;
 
     &:active {
@@ -127,6 +127,8 @@
     }
 
     @media @desktop-widths {
+      cursor: pointer;
+
       &:hover {
         opacity: 1;
       }

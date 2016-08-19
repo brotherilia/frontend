@@ -73,14 +73,24 @@
   &__img-link {
     display: block;
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, .5);
+    cursor: default;
 
-    &:hover {
-      opacity: 0.5;
-      box-shadow: none;
+    @media @desktop-widths {
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.5;
+        box-shadow: none;
+      }
     }
 
     &:active {
-      opacity: 1;
+      opacity: 0.5;
+      box-shadow: none;
+
+      @media @desktop-widths {
+        opacity: 1;
+      }
     }
   }
 

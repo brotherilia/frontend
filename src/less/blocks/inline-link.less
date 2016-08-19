@@ -1,18 +1,22 @@
 .inline-link {
   border-bottom: 1px dotted;
   color: @link-color;
-  cursor: pointer;
+  cursor: default;
 
-  &:visited,
-  &:active {
-    border-bottom: 1px dotted;
-    color: @link-color;
+  @media @desktop-widths {
+    cursor: pointer;
   }
 
   &:hover {
+
     @media @desktop-widths {
       border-bottom: none;
       color: @link-hover-color;
     }
+  }
+
+  &:active {
+    border-bottom: none;
+    color: @link-hover-color;
   }
 }

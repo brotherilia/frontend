@@ -4,13 +4,11 @@
   display: block;
 
   &__body {
-    box-sizing: border-box;
+    display: block;
 
     &::before,
     &::after {
-      content: "";
-      position: absolute;
-      display: block;
+      .pseudo-common();
     }
   }
 
@@ -229,5 +227,4 @@
       margin: 0 auto;
     }
   }
-
 }
