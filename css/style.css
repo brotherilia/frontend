@@ -594,7 +594,7 @@ img {
   height: 32px;
 }
 .css-icon__body {
-  box-sizing: border-box;
+  display: block;
 }
 .css-icon__body::before,
 .css-icon__body::after {
@@ -1214,9 +1214,9 @@ img {
 
   font-weight: bold;
   font-size: 24px;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 24px;
-  line-height: 16px;
+  line-height: 12px;
   font-family: "Jura", Arial, sans-serif;
   color: #444444;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
