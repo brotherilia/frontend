@@ -1255,13 +1255,11 @@ img {
   display: block;
 
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
-}
-.article__img-link:hover {
-  box-shadow: none;
-  opacity: 0.5;
+  cursor: default;
 }
 .article__img-link:active {
-  opacity: 1;
+  box-shadow: none;
+  opacity: 0.5;
 }
 .article__img-link-dsbl {
   display: block;
@@ -1886,6 +1884,16 @@ img {
   .logo__img {
     width: 60px;
     height: 40px;
+  }
+  .article__img-link {
+    cursor: pointer;
+  }
+  .article__img-link:hover {
+    box-shadow: none;
+    opacity: 0.5;
+  }
+  .article__img-link:active {
+    opacity: 1;
   }
   .info--news {
     position: static;
