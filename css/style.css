@@ -578,13 +578,12 @@ img {
   color: #3600ff;
 
   border-bottom: 1px dotted;
-  cursor: pointer;
+  cursor: default;
 }
-.inline-link:visited,
 .inline-link:active {
-  color: #3600ff;
+  color: #d74f04;
 
-  border-bottom: 1px dotted;
+  border-bottom: none;
 }
 .css-icon {
   position: relative;
@@ -966,6 +965,7 @@ img {
 
   border-radius: 5px;
   box-shadow: 2px 2px 5px 0 #ca7e7d;
+  cursor: default;
 }
 .menu-list__link:hover {
   background-color: #ebcdcd;
@@ -1090,7 +1090,7 @@ img {
   background: none;
   border: none;
   outline: none;
-  cursor: pointer;
+  cursor: default;
   opacity: 0.5;
 }
 .icon-list__link:active {
@@ -1152,6 +1152,8 @@ img {
   display: block;
 
   line-height: 0;
+
+  cursor: default;
 }
 .logo__img {
   position: relative;
@@ -1611,6 +1613,9 @@ img {
     -webkit-transform: none;
             transform: none;
   }
+  .inline-link {
+    cursor: pointer;
+  }
   .inline-link:hover {
     color: #d74f04;
 
@@ -1764,6 +1769,7 @@ img {
     background:         linear-gradient(to bottom, #ffffff, #cccccc 100%);
     border-radius: 0;
     box-shadow: none;
+    cursor: pointer;
   }
   .menu-list__link:hover {
     color: #d74f04;
@@ -1831,6 +1837,9 @@ img {
     bottom: 55px;
     left: 35px;
   }
+  .icon-list__link {
+    cursor: pointer;
+  }
   .icon-list__link:hover {
     opacity: 1;
   }
@@ -1865,6 +1874,9 @@ img {
     height: 1px;
 
     background: #980000 0;
+  }
+  .logo__link {
+    cursor: pointer;
   }
   .logo__img::after {
     left: 0;
