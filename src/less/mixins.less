@@ -12,16 +12,6 @@
   min-width: 320px;
 }
 
-.icon-size() {
-  width: @icon-size;
-  height: @icon-size;
-}
-
-.icon-desktop-size() {
-  width: @icon-size / 1.5;
-  height: @icon-size / 1.5;
-}
-
 .pseudo-common() {
   content: "";
   position: absolute;
@@ -104,4 +94,9 @@
   .popup-arrow();
   bottom: -30px;
   border-top: 15px solid @slogan-color;
+}
+
+.icon-desktop-size() {
+  width: @icon-size / 1.5;
+  height: @icon-size / 1.5;
 }

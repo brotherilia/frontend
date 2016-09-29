@@ -84,7 +84,7 @@
     }
 
     @media @desktop-widths {
-      bottom: 55px;
+      bottom: 8px;
       right: auto;
       left: 35px;
     }
@@ -110,6 +110,8 @@
 
   &__link {
     .reset-spaces();
+    .icon-size();
+    position: relative;
     display: block;
     border: none;
     outline: none;
@@ -141,6 +143,10 @@
 
     @media @desktop-widths {
       .icon-desktop-size();
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
