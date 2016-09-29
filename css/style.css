@@ -2000,21 +2000,25 @@ img {
   }
   .icon-list__item--to-top {
     right: auto;
-    bottom: 12px;
+    bottom: 8px;
     left: 35px;
   }
   .icon-list__link {
-    width: 21.33333333px;
-    height: 21.33333333px;
-
     cursor: pointer;
   }
   .icon-list__link:hover {
     opacity: 1;
   }
   .icon-list__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
     width: 21.33333333px;
     height: 21.33333333px;
+
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   .logo {
     height: 75px;
